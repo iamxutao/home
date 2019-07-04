@@ -1,0 +1,127 @@
+/* body {
+    background: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+  不会因浮动而无高度
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.topNavBar .logo {
+    font-family: "Hiragino Kaku Gothic Std";
+    font-size: 22px;
+    padding-top: 1px;
+}
+
+.topNavBar .logo .rs {
+    color: #e6686a;
+    margin-right: 4px;
+}
+
+.topNavBar .logo .card {
+    color: #9A9DA2;
+}
+
+.topNavBar nav {
+    font-size: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.topNavBar nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topNavBar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topNavBar nav ul>li {
+    float: left;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.topNavBar nav ul>li>a {
+    border-bottom: 3px solid transparent;
+}
+
+.topNavBar nav ul>li>a:hover {
+    border-bottom-color: #DC6465;
+} */
+
+body {
+    background: #000;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.topNavBar {
+    padding: 20px 16px;
+}
+
+.topNavBar>a {
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.logo>.rs,
+.logo>.card {
+    font-size: 24px;
+    color: #e6686a;
+    margin-right: 4px;
+    font-weight: 700;
+    font-family: 'Arial Black';
+}
+
+.logo>.card {
+    color: #9a9da2;
+}
+
+.topNavBar>nav>ul {
+    list-style: none;
+    padding: 7px 0px 0px 0px;
+    margin: 0;
+}
+
+.topNavBar>nav>ul>li {
+    float: left;
+    margin: 0 17px;
+}
+
+.topNavBar>nav>ul>li>a {
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    color: #b7b7b7;
+    border-bottom: 3px solid transparent;
+    margin-top: 3px;
+}
+
+.topNavBar>nav>ul>li>a:hover {
+    border-bottom-color: #e06567;
+}
