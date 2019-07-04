@@ -1,0 +1,626 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>微信</title>
+	<style>
+		html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-size: 16px;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	line-height:1;
+	display: flex;
+	justify-content: center;  /*屏幕居中显示*/
+	align-items: center;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+	
+/*  外面的盒子	*/
+		.waike {
+			width : 805px ;
+			height: 540px ;
+			background: #FFFFFF;
+			border: 1px solid #666666;
+			font-size:0px;
+			overflow: hidden
+		}
+	/*  功能盒子	*/		
+		.gongneng {
+		    width : 61px ;
+			height: 540px ;
+			background: #232121;
+			overflow: hidden;
+			display: inline-block;
+			float: left;
+			
+		}
+		.touxiang{
+			display : block;
+        	margin : 20px auto ;
+			border-radius: 4px;
+			height : 38px; 
+			width : 38px;
+		}
+		
+		#set{
+			overflow: hidden;
+			width: 25px;
+			margin: 0 auto;
+		}
+		
+		#set li{
+			width: 25px;
+			height: 25px;
+			background-size: contain !important;
+			cursor: pointer  /*	  指针*/
+		}
+		#set li:first-child{
+			background: url(img/chart.png) no-repeat center;
+		}
+	
+		
+		#set li:first-child:hover{
+			background: url(img/chart1.png) no-repeat center;
+		}		
+		
+		#set li:nth-child(2){
+			background: url(img/Addressbook.png) no-repeat center ;
+			margin-top: 24px;
+		}
+		#set li:nth-child(2):hover{
+			background: url(img/Addressbook1.png) no-repeat center;
+			
+		}		
+		
+		#set li:nth-child(3){
+			background: url(img/Collection.png) no-repeat center;
+			width:29px;
+			height: 25px;
+			margin: 24px -2px ;
+		}
+		
+		#set li:nth-child(3):hover{
+			background: url(img/Collection1.png) no-repeat center ;
+		}		
+		
+		#set li:last-child{
+			background: url(img/more.png) no-repeat center;
+			margin-top: 300px;
+		}
+		#set li:last-child:hover{
+			background: url(img/more1.png) no-repeat center;
+		}
+			
+		.contact{
+			width:250px;
+			height:540px;
+			background:#E4E2E2;
+			display: inline-block;
+			font-size:0px;
+			float: left;
+			}
+		.search{
+			height: 63px;
+			
+				
+		}
+		.txt{
+			width:167px;
+			height: 20px;
+			margin-top: 26px;
+			margin-left:12px;
+			border-radius: 3px;
+			display: inline-block;
+			border:#1D1A1A solid   1px ;
+			color: #000000;
+			padding-left: 21px;
+			font-size: 13px;
+			background-color:  #C5C5C5 !important;
+			background:url(img/sou.png) no-repeat ;
+			background-size: 20px;
+
+		}
+		
+		ul.chart{
+			height: 477px;
+			overflow:auto;   /*如果内容被修建,滚动条查看*/
+		}
+
+		ul.chart li{
+			width: 223px;
+			background-color: #E4E2E2;
+			cursor: pointer ;       /*鼠标箭头(手)*/
+			overflow: hidden;
+		}
+		ul.chart li:hover{
+			background-color: #C5C5C5
+		}
+		.chart li{
+			padding: 13px;
+		
+		}
+		.chart li div p{
+			width: 160px;
+			display: block;
+			white-space: nowrap; 	/*不换行*/
+			text-overflow: ellipsis;    /*多于字数变成省略号*/
+			overflow: hidden;       /*内容会被修剪，并且其余内容是不可见的。*/
+
+		}
+		.chart li div p span:first-child{
+			margin-bottom: 9px;
+			font-size: 14px;
+			display: inline-block;
+			
+
+		}
+		.chart li div p span:last-child{
+			margin-bottom: 9px;
+			font-size: 5px;
+			margin-top: 3px;
+			display: inline-block;
+			color: #A7A7A7;
+			float: right;
+			line-height: 30%
+		}
+
+		.chart li div p:last-child{
+			font-size: 5px;
+			color: #A7A7A7;
+			height:15px;
+			
+		}
+
+		
+		.chart li img{
+			float: left;
+			width:41px;
+			height: 41px;
+			margin-right: 13px;
+		}
+		.righttop{
+			 width: 494px;
+			height: 63px;
+			border-bottom: #E5E5E5 solid 1px;
+			float: left;
+			display:block;
+			position: relative;  /*   第一步  父级设置 */
+
+		}
+		
+		.topleftcorner div:first-child{
+			width: 63px;
+			height: 63px;
+			display: inline-block;
+			background: url(img/back.png) no-repeat;
+			background-position: 75%  60%;              /*控制图片位置*/
+			background-size: 18px 18px;					 /*控制图片大小*/
+			float: left;
+			cursor: pointer ;  
+		}	
+		.topleftcorner div > p{
+			display: inline-block;
+			float: left;
+			margin-top: 27px;
+			font-size: 18px;		
+		} 
+
+		
+		.toprightcorner  {
+			position: absolute;		/* 第二步   需调整模块设置*/
+			right: 13px;			/*第三步  位置设置 */
+			top:10px;				/*第三步*/
+		}
+		
+		
+		
+		.top2 .img{
+			width: 13px;
+			height: 13px;
+			float: left;			/*默认改成block*/
+			margin-left: 26px;		/*图片间距*/	
+			position: relative;
+			overflow: hidden;
+		}
+		
+		
+		.top2 .img>img{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			transition: all 0.4s;      /*动作四秒*/	
+		}
+		.top2 .img>img:last-child{
+			left: 22px;
+			transition: all 0.4s;
+		}
+		.top2 .img:hover img:first-child{
+			left: 22px;
+	
+		}
+		.top2 .img:hover img:last-child{
+			left: 0;
+	
+		}
+		
+		
+		
+		.toprightcorners{
+			position: absolute;
+			right: 18px;
+			top: 35px;
+		}
+		
+		.center{
+			width: 494px;
+			height: 478px;
+			display: inline-block;
+			
+		}
+		
+		.center>div{
+			width: 429px;
+			height: 423px;
+			float: right;
+			overflow: auto;
+			
+		}
+		
+		.center>div>div {
+			width: 361px;
+			height: 76px;
+			
+		}
+
+		
+		.center div img{
+			width: 52px;
+			height: 49px;
+			float: right;
+			margin-right: 13px;
+			margin-top: 15px 
+				
+		}
+		
+		.picture{
+			width: 361px;
+			height: 177px;	
+			background: url(img/center1.jpg) no-repeat;
+			background-size:cover;
+			background-position:center center;
+     		margin: 16px 0px 0px 0px;
+			display: block;
+			position:relative;
+			color: #FFFFFF;
+			font-size: 15px;
+				
+		}
+		.picture p{
+			position:absolute;
+			color:white;
+			left: 18px;
+			bottom:12px;
+			font-size: 14px;
+		}
+		
+
+	
+		.center>div>div>p{
+			width: 278px;
+			font-size: 14px;
+		    display: block;
+			float:left;
+			margin-top:30px;       /*有问题*/
+			margin-left: 15px;
+			line-height: 20px;		/*字体行距*/
+		}
+		
+		.last{
+			width: 444px;
+			height:52px;
+			float: left;
+			border-top:#E0E0E0 solid 1px;
+			display: block;
+			box-sizing: border-box ；   				 /*内边线*/   
+			
+		}
+		.last dd{
+			float: left;
+			width: 147px;
+			height: 52px;
+			border-right:#e0e0e0 solid 1px;
+			display: flex;                          /*	  盒子布局 */
+			justify-content: center;				/*	  盒子布局 */
+			align-items: center;					/*	  盒子布局 */
+			
+		}
+		
+		dd>img{
+			width: 15px;
+			height: 15px;
+			margin-right: 4px 
+			
+		}
+		
+		
+		dd p{
+			font-size: 12px;
+			text-indent:2px;
+		}
+		
+		.fan{
+			width: 50px;
+			height: 52px;
+			float: right;
+			border-top:#e0e0e0 solid 1px;
+		}
+		  
+		.fan>img{
+			width:13px; 
+			padding-top: 20px;
+			padding-left: 15px;
+	
+		}
+		
+	</style>	
+</head>
+
+<body>
+	<div class = "waike">
+		
+	    <div class = "gongneng">
+			<img class = "touxiang" src="img/微信图片_20190319131532.jpg" alt="头像" >
+			
+			<ul id="set">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>	
+		</div>
+<!--最近联系人列表-->
+	<div class = "contact">
+		
+	<div class="search">
+		<input type="text"  placeholder="搜索"  class="txt"/>
+	</div>
+
+	<ul class = "chart">
+		
+		<li > 
+			<img class="photo1" src="img/1.jpg" alt="头像1" title="段的妮" > 	
+			<div>
+				<p> <span>段的妮</span>		<span>13:50</span></p>
+				<p>[链接]</p>
+			</div>
+			
+		</li>
+
+		<li>
+		
+		 <img  src="img/2.jpg" alt="头像2" title="文件传输助手">
+			<div>
+				<p><span>文件传输助手</span>		<span>19/3/21</span></p>
+				<p>[图片]</p>
+			</div>
+			
+			
+		</li>
+		<li>
+				 <img  src="img/4.jpg" alt="头像4" title="杨蓉">
+			<div>
+				<p><span>杨蓉</span>   <span>13:10</span></p>
+				<p>微笑</p>
+			</div>
+			
+		</li>
+		<li>
+			 <img  src="img/5.jpg" alt="头像5" title="腾讯新闻">
+			<div>
+				<p><span>腾讯新闻</span>		<span>13:07</span></p>
+				<p>航拍“地狱之门”大火熊熊燃烧48年</p>
+			</div>
+			
+		</li>
+		
+		<li>
+			 <img  src="img/6.jpg" alt="头像6" title="老虎先生">
+			<div>
+				<p><span>老虎先生</span>		<span>12:33</span></p>
+				<p>今天吃了三个人.....</p>
+			</div>
+			
+		</li>
+		<li>
+			 <img  src="img/7.jpg" alt="头像7" title="猫小姐">
+			<div>
+				<p><span>猫小姐</span>		<span>19/3/22</span></p>
+				<p>看我耳朵,可爱吗?</p>
+			</div>
+			
+		</li>
+		<li>
+			 <img  src="img/8.jpg" alt="头像8" title="马大叔">
+			<div>
+				<p><span>马大叔</span>		<span>19/3/22</span></p>
+				<p>你好!</p>
+			</div>
+			
+		</li>
+		<li class="dog">
+			 <img  src="img/9.jpg" alt="头像9" title="狗大爷">
+			<div>
+				<p><span>狗大爷</span>		<span>19/3/21</span></p>
+				<p >这棍子真好吃</p>
+			</div>
+			
+		</li>
+	</ul>
+
+	</div>
+	<div>     				<!--	右框-->
+<div class="righttop">   <!--	有上框-->
+		 <div class= "topleftcorner">					<!--	有上框左边-->
+			<div>	
+								<!--	有上框左边1-->
+			</div>
+			<div>				<!--	有上框左边2-->
+				<p>CSDN</p>
+			</div>
+		  </div>
+		  
+		  
+		  <div class="toprightcorner"><!--	右上框右边上-->
+				<div class="top2">
+					<div class="img">
+						<img class="p1" width="13px"  src="img/top.svg" alt="置顶"  title = "置顶">
+						
+						<img class="p1" width="13px"  src="img/top.svg" alt="置顶"  title = "置顶">
+					</div>
+					<div class="img">
+						<img class="p1" width="10px"  src="img/min1.svg" alt="最小化图片"  title = "最小化">
+						
+						<img class="p1" width="10px"  src="img/min1.svg" alt="最小化图片"  title = "最小化">
+					</div>
+					<div class="img">
+						<img class="p1" width="10px"  src="img/max.svg" alt="最大化图片"  title = "最大化"/>
+						<img class="p1" width="10px"  src="img/max.svg" alt="最大化图片"  title = "最大化"/>
+					</div>
+					<div class="img">
+						<img class="p1" width="8px"  src="img/close.svg" alt="关闭图片"  title = "关闭" >
+						<img class="p1" width="8px"  src="img/close.png" alt="关闭图片"  title = "关闭" >
+					</div>
+				 
+				 	
+				</div>
+			  	
+			  
+		  </div>			<!--    有上框右上-->
+		  <div class="toprightcorners">
+		  		<img class="p1"  src="img/more1.svg" alt="详细"  title = "详细" >
+		  </div>			<!--    有上框右下-->
+		
+	</div>
+	</div>
+		
+		<div class="center">				<!--    右框中-->
+		   <div>
+			<span class="picture" ><p>Google 再被罚！</p></span> <!-- 透明度   background: rgba(106,106,106,0.9>-->
+	
+			
+			<div style="border-bottom: #E5E5E5 solid 1px;">
+				<p>互联网行业的体面隐退|畅言</p>
+				<img  src="img/center2.jpg" alt="文章主封面" >
+			</div>
+
+
+			<div style="border-bottom: #E5E5E5 solid 1px;">
+				<p>李笑来登顶 GitHub TOP 榜！币圈大佬要教程序员如何自学编程</p>
+				<img   src="img/center3.jpg" alt="文章主封面" >
+			</div>
+
+
+			<div>
+				<p>算法工程师的冰与火之歌</p>
+				<img   src="img/center4.jpg" alt="文章主封面" >
+			</div>
+		
+			   <div style="border-bottom: #E5E5E5 solid 1px;">
+				<p>开源图数据库项目 DGraph 的前世今生 | 技术头条</p>
+				<img   src="img/center5.jpg" alt="文章主封面" >
+			</div>
+
+
+			<div>
+				<p>Pig 变飞机？AI 为什么这么蠢！</p>
+				<img   src="img/center6.jpg" alt="文章主封面" >
+			</div>
+		
+		
+		
+			
+		
+		</div>  		
+						
+			<dl class="last"> 			<!--    右框下-->
+				
+				<dt>
+					<dd>
+						<img src="img/more.png" alt="联系我们图形"> 
+						<p>联系我们</p>
+					</dd>
+			        <dd>
+						<img src="img/more.png" alt="精选栏目图形"> 
+						<p>精选栏目</p>
+					</dd>
+					<dd>
+						<img src="img/more.png" alt="CSDN图形"> 
+						<p>CSDN</p>
+					</dd>
+				</dt>
+				
+				
+			</dl>
+				
+			<span class="fan">
+					<img src="img/more1 (1).svg" alt="更多图形"> 
+				</span>	
+				
+				
+			</div>
+		
+		
+					
+		
+		
+</div>
+	
+</body>	
+	
+</html>

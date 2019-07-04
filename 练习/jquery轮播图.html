@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+	body, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrapper {
+            width: 520px;
+            margin: 50px auto 0;
+            font-size: 0;
+        }
+        .box {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            overflow: hidden;
+        }
+        .box .img-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3120px;
+            height: 280px;
+        }
+        .box .img-list li {
+            display: inline-block;
+            width: 520px;
+            height: 280px;
+        }
+        .box .img-list img {
+            width: 520px;
+        }
+        .wrapper .box span {
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            margin-top: -25px;
+            width: 30px;
+            height: 50px;
+            line-height: 47px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            z-index: 999;
+            user-select: none;
+        }
+        .wrapper .box .left {
+            left: 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .wrapper .box .right {
+            right: 0;
+            border-radius: 10px 0 0 10px;
+        }
+        .box .dot {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .dot .dot-list {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .dot-list .item {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 2px;
+            cursor: pointer;
+        }
+        .dot-list .active {
+            background-color: #ff6700;
+        }
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+        <div class="box">
+            <span class="left">&lt;</span>
+            <span class="right">&gt;</span>
+            <ul class="img-list">
+                <li>
+                    <a href="javascript:;">
+                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554142363257&di=197516f4d014d665d71614a9dd661c21&imgtype=0&src=http%3A%2F%2Fpic2.ooopic.com%2F11%2F72%2F24%2F89b1OOOPIC13.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="http://ftp.nowamagic.net/librarys/images/92.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="http://img.mp.itc.cn/upload/20170706/88c62ffcfe8748a78e6b2d66c77ebbef_th.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554142507449&di=460257168e7a96da655a28ee7bfcc292&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F16%2F17%2F72%2F24858PIC3hD_1024.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554278929&di=31b49ed3ef2bde4304c49a8632c79456&imgtype=jpg&er=1&src=http%3A%2F%2Fimages.ali213.net%2Fpicfile%2Fpic%2F2013%2F12%2F15%2F584_20131215140559601.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554142363257&di=197516f4d014d665d71614a9dd661c21&imgtype=0&src=http%3A%2F%2Fpic2.ooopic.com%2F11%2F72%2F24%2F89b1OOOPIC13.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="dot">
+                <ul class="dot-list">
+                    <li class="item active"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script>
+	// 设置比较索引的最小值0，5
+        var minNum = 0;
+        var maxNum = 5;
+        // 刚开始索引为0
+        var index = 0;
+        // 设置一个计时器为空
+        var counter = null;
+        // 设置最小移动距离520，因为这边每张图片都为宽度520px，高度280px
+        var limWidth = 520;
+
+        // 设置自动轮播函数
+        function autoMove() {
+            // 如果计时器不为空的话那么跳出，计时器不为空，说明当前有计时器在跑，那么你就老老实实的跑当前的计时器，别给搞事
+            if (counter == null) {
+                counter = setInterval(autoPlay, 3000);
+            }
+            // 如果计时器为空的话，那么开启一个每3秒执行一次autoPlay的函数
+         
+        }
+
+        // 自动轮播函数，其实很简单，向函数cliMove传递参数right，就好比，一个人每3秒点击一次右边的小按钮，不过这变有电脑去执行
+        function autoPlay() {
+            cliMove('right');
+        }
+        // 执行函数，传递形参，代表方向
+        function cliMove(direction) {
+            // 因为在这边有涉及到整个ul宽度的变化的动画，stop()函数有两个参数，涉及到jQuery动画，第一个参数意思是，是否还要保留动画队列，false不保留，true保留。第二个参数意思是，是否立即执行完当前的动画，true是，false不是，那这边选择true的原因是我需要你立即响应当前用户的操作，防止用户快速点击左右按钮，移开鼠标，而动画却还在移动。这边第一个参数填false或者true，已经影响不了什么了，因为当前动画立即执行，动画队列肯定是没有了，所有第一个参数填false或者true，已经不打紧了
+            $('.img-list').stop( false, true );
+            // 如果用户点击的是右边的按钮
+            if ( direction == "right" ) {
+                // 那么索引值加1，没点击一次在原有基础上加一次
+                index++;
+                // 如果索引值大于5了
+                if ( index > 5) {
+                    // 意味着用户浏览到第六张了，而这边第六张正是第一张，为了实现无缝连接，所以这样处理，看着只有5张，实际上头尾两张是一样的，所以有六张
+                    // 那么将ul的left设置为0，又回到了第一张，注意这边是迅速移动到第一张，因为用了css属性，而不是animate移动动画
+                    $('.img-list').css({
+                        left: 0
+                    })
+                    // 同时将索引值设置为1，注意这边的1为第二张，在大多数编程语言中，数组都是从0开始，JS也是一样的
+                    index = 1;
+                }
+            }
+            // 如果传递用户点击的是左边的按钮
+            else if ( direction == "left") {
+                // 那么索引值减1
+                index--;
+                // 如果索引值小于0的话，运用的原理跟上面雷同，意味着迅速移到第六张
+                if ( index < 0 ) {
+                    $('.img-list').css({
+                        left: maxNum * -limWidth
+                    })
+                    // 同时索引值变为4，意味着变为第五张
+                    index = 4;
+                }
+            }
+            // 每次index变换时小原点的背景也跟着变换,与图片一一对应,但是图片一共是6张,小原点就5个,所有这边进行判断,如果index大于4的话就返回0即代表着第一个小原点,否则的话图片就随着index变化而变化
+            dotMove($('.item').eq(index > 4 ? 0 : index));
+
+            // 不关点击的是左边的还是右边的，最后结果都是要执行这句话的，这步是动画移动的关键，
+            // ul的left值设为当前索引与每张图片最小宽度的乘积，这边的负值是意味着，这个ul定位相对于父级left的负值
+            $('.img-list').animate({
+                left: index * -limWidth
+            });
+        }
+
+        // 绑定ul父级的鼠标进入，离开事件，jQuery链式调用，如果鼠标进入，那么清空当前自动轮播的计时器，如果鼠标离开，那么重新执行自动轮播的函数
+        $('.box').mouseenter(function () {
+            clearInterval(counter);
+            counter = null;
+        }).mouseleave(function () {
+            autoMove();
+        })
+
+        //绑定点击事件，如果点击了右边按钮，那么触发函数cliMove，这个函数在上面已经详细注释了，并传入right，图片就会跟你按的次数，进行移动播放
+        $('.right').click(function () {
+            cliMove('right');
+        }) 
+        $('.left').click(function () {
+            cliMove('left');
+        })
+
+        // 绑定下面小原点事件，如果点击了其中任意一个小原点，那么获取到当前点击的小原点的索引，并且赋值给index，并且执行函数cliMove，不传入参数，因为此时，希望图片与小原点一一对应       
+        $('.item').click(function () {
+            index = $(this).index();
+            cliMove('');
+        })
+
+        // 点击小原点后将会触发cliMove函数，并且在这个函数中，执行了dotMove，移除当前小原点的CSS样式，向dotMove函数传入当前点击的小原点所在的位置，并且设置其CSS样式，即点击的小原点背景变为橘黄色
+        function dotMove(dom) {
+            $('.active').removeClass('active');
+            dom.addClass('active');
+        }
+
+        // 当页面刷新，先执行一边自动轮播的函数，这个时候图片就会自己轮播起来了
+        autoMove();
+	</script>
+
+</html>

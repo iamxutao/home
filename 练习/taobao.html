@@ -1,0 +1,7034 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>淘宝网-淘！我喜欢</title>
+<style>
+	/*@font-face{
+    font-family: xutao250;
+    src: url('ttf.TTF'); 
+}定义你自己的字体！！！*/
+
+		html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-size: 16px;
+	font-family:tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+} 
+html{
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	line-height:1;
+	justify-content: center;  /*屏幕居中显示*/
+	align-items: center;
+	overflow: auto;
+	font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*start*/
+
+	.all-wrap{
+		width: 1190px;
+		margin:0px auto;
+		
+		
+	}
+	.top-wrap{
+		width: 1190px;
+		height: 35px;
+		margin: 0px auto;
+		border-bottom:#E4E4E4 solid 1px;
+		border-left: #E4E4E4 solid 1px;
+		border-right: #E4E4E4 solid 1px;
+		box-sizing: border-box;   				 /*内边线*/   
+
+	}
+	.top-wrap p{
+		font-size: 12px;
+		display: inline-block;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		margin-top: 0px;
+	}
+	
+	.top-left-wrap{
+		width: 302px;
+		height: 35px;
+		float: left;
+		margin-top: 0px;
+		
+	}
+	.top-left-wrap>div{
+		height: 35px;
+		line-height: 30px;
+		display: block;
+		padding: 0px 6px;
+		float: left;
+	}
+	.top-left-wrap div img{
+			width: 6px;
+		margin-left: 7px;
+	}
+	.top-left-wrap div span{
+		margin-right: 7px;
+		  
+	}
+	
+	.top-left-wrap>div:first-child{
+		width: 66px;
+		height: 35px;
+		overflow: visible; 			 /*	内容不被修剪，显示在元素框之外*/
+		position: relative;
+	}
+	
+	.top-left-wrap>div:first-child:hover .top-left-menu{     						/*	注意*/
+/*
+		height: 288px;
+		transition: all 0.4s;
+*/
+		display: block;
+	}
+	
+	.top-left-menu{
+		overflow: auto;
+		width: 265px;
+		height:288px;
+		position: absolute;  	  /*	定位，显示在元素框之外*/
+		top: 35px;
+		background:#FFFFFF;
+		display: none;			/*	部位被隐藏的对象保留期物理空间*/
+		border:#E4E4E4 solid 1px;
+		text-indent: 10px;
+		left:-1px;
+		z-index: 2;
+		
+		
+		/*		height: 0px;*/
+		/*		transition: all 0.4s;*/
+		
+	}
+	.top-left-menu>ul>li{
+		font-size: 12px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		
+	}
+	
+	
+	 
+									/*右上角的菜单*/
+	.top-right-wrap{
+		width: 610px;
+		height: 35px;
+		float: right;
+		
+	}
+	.top-right-wrap>div{
+		float: right;
+		margin-top: 0px;
+		padding:0px  6px;
+		line-height: 30px;
+		
+	
+	}
+	.img-more{
+			width: 6px;
+		margin-left: 6px;
+	}
+	
+	.top-right-wrap>div:first-child{
+		width: 84px;
+		height: 35px;
+		overflow: visible; 			 /*	内容不被修剪，显示在元素框之外*/
+		position: relative;
+		
+	}
+	.img-more2{
+		height: 6px;
+		margin-right: 5px;
+		margin-bottom: 0px;
+		
+	}
+	
+	.top-right-wrap>div:nth-child(2){
+		width: 67px;
+		height: 35px;
+		
+	}
+	.top-right-wrap>div:nth-child(3){
+		width: 91px;
+		height: 35px;
+		
+	}
+	.top-right-wrap>div:nth-child(5){
+		width: 55px;
+		height: 35px;
+		
+	}
+	.top-right-wrap>div:nth-child(6){
+		width: 72px;
+		height: 35px;
+		
+	}
+	.top-right-wrap>div:nth-child(7){
+		width: 72px;
+		height: 35px;
+		
+	}	
+	.top-right-wrap>div:last-child{
+		width: 67px;
+		height: 35px;
+		
+	}	
+	.img-more3{
+		width: 12px;
+		margin-bottom: -2px;
+		
+	}
+	.img-more4{
+		width:12px;
+		margin-bottom: -2px;
+		
+	}
+	.top-right-wrap p{
+		color: #6C6C6C;
+	}
+	
+	
+	.top-menu-one1 {
+		width: 1189px;
+		height: 311px;
+		position: absolute;
+		top: 35px;
+		right: -2px;
+		border: 1px solid #EEE;
+		background: #FFFFFF;
+		display: none;
+		z-index:9999;              /*永远显示在图层上方，数值越大图层越大，需配合position使用*/
+	}
+	
+	.top-right-wrap div:first-child:hover .top-menu-one1{
+	
+		display: block;
+		
+	}
+	
+	.top-menu-one1>div{
+		width: 25%;
+		height: 309px;
+		float:left;
+		padding: 5px;
+		box-sizing: border-box;
+		margin-top: 0px;
+		border: 1px solid #EEE;
+	}
+	
+	.top-menu-content1 li {
+		float: left;
+		width: 24%;
+		height: 30px;
+		padding-top: 5px;
+		overflow: hidden;
+		box-sizing: border-box;
+		
+	}
+	
+	.top-menu-one1 p{
+		height: 25px;
+		font-size: 12px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		margin:0px 2px;
+		padding: 0 8px;
+		border-radius: 3px;
+		line-height: 25px;
+		float: left;
+		color: #000000;
+		box-sizing: border-box;
+	}
+	
+	.top-menu-content1 p:hover{
+		background: #ff5500;
+		color:#FFFFFF;
+	}
+	
+	.top-menu-content2 p:hover{
+		background: #9fb838;
+		color:#FFFFFF;
+	}
+	
+	.top-menu-content3 p:hover{
+		background: #d75696;
+		color:#FFFFFF;
+	}
+	
+	.top-menu-content4 p:hover{
+		background: #2e9fdb;
+		color:#FFFFFF;
+	}
+	
+	.top-menu-one1 h4{
+		font-size: 17px;
+		margin: 5px;
+		font-weight: 700;
+		display: inline;
+	}
+	
+	.top-menu-content2 li{
+		width: 33%;
+		height: 30px;
+		padding-top: 5px;
+		box-sizing: border-box;
+		float: left;
+		overflow: hidden;
+	}
+	
+	
+	
+	.top-menu-content3 li{
+		width: 33%;
+		height: 30px;
+		padding-top: 5px;
+		box-sizing: border-box;
+		float: left;
+		overflow: hidden;
+	}
+	
+	.top-menu-content4 li{
+		width: 49%;
+		height: 30px;
+		padding-top: 5px;
+		box-sizing: border-box;
+		float: left;
+		overflow: hidden;
+	}
+	
+
+	.top-menu-one2>div{
+		width: 72px;
+		height: 74px;
+		padding: 8px 0;
+		box-sizing: border-box;
+		position: absolute;
+		top: 35px;
+		left:0px;
+		display: none;
+		border: 1px solid #EEE;
+		z-index:9999; 
+		background: #fff;
+
+	}
+	
+	.top-menu-one2{
+	position: relative;
+	overflow: visible; 
+	}
+	
+	.top-menu-one2:hover .top-right-meun2{
+		display: block;
+	}
+	
+	.top-text:hover {
+		color: red;
+	}
+	
+	
+	.top-menu-one3>div{
+		width:  84px;
+		height: 214px;
+		padding: 8px 0;
+		box-sizing: border-box;
+		position: absolute;
+		top: 35px;
+		left:0px;
+		display: none;
+		border: 1px solid #EEE;
+		z-index:9999; 
+		background: #fff;
+	}
+	
+	.top-menu-one3{
+	position: relative;
+	overflow: visible; 
+	}
+	.top-menu-one3:hover .top-right-meun3{
+		display: block;
+	}
+	
+	
+	.top-menu-one5>div:last-child{
+		width: 72px;
+		height: 74px;
+		padding: 8px 0;
+		box-sizing: border-box;
+		position: absolute;
+		top: 35px;
+		left:0px;
+		display: none;
+		border: 1px solid #EEE;
+		z-index:9999; 
+		background: #fff;
+	}
+	
+	.top-menu-one5{
+	position: relative;
+	overflow: visible; 
+		
+	}
+	.top-menu-one5:hover .top-right-meun5{
+		display: block;
+	}
+	
+	.collenction3{
+		float: left;
+		width: 13px;
+		height: 13px;
+		overflow: hidden;
+		margin-top: 11px;
+		margin-right: 4px;
+
+	}
+	
+	.collenction3 img:first-child{
+		float: left;
+		margin-top: 0px;
+	}
+	
+	.collenction2{      /*收藏夹图标更换*/
+		width: 13px;
+		float: left;
+		margin-left: -1px;  
+		margin-top: 3px;
+		
+	}    
+	.top-menu-one5:hover .img-more3{
+		margin-top: -12px;
+	}
+	
+	.top-menu-one5:hover .collenction2{
+		margin-top: -1px;
+	}
+	
+	
+	.top-menu-one7>div{
+		width: 84px;
+		height: 74px;
+		padding: 8px 0;
+		box-sizing: border-box;
+		position: absolute;
+		top: 35px;
+		left:0px;
+		display: none;
+		border: 1px solid #EEE;
+		z-index:9999; 
+		background: #fff;
+	}
+	
+	.top-menu-one7{
+	position: relative;
+	overflow: visible; 
+	}
+	.top-menu-one7:hover .top-right-meun7{
+		display: block;
+	}
+	
+	.top-menu-one2>div>ul>li{
+		display: block;
+		padding: 0px 5px;
+		height: 28px;
+		font-size: 12px;
+		
+	}
+	
+	.top-menu-one3>div>ul>li{
+		height: 28px;
+		display: block;
+		padding: 0px 5px;
+		font-size: 12px;
+	}
+	
+	.top-menu-one5>div>ul>li{
+		height: 28px;
+		display: block;
+		padding: 0px 5px;
+		font-size: 12px;
+	}
+	
+	.top-menu-one7>div>ul>li{
+		height: 28px;
+		display: block;
+		padding: 0px 5px;
+		font-size: 12px;
+	}
+	
+	.top-text{
+	 color: #6C6C6C
+	}
+	
+			/*	搜索框部分*/
+	
+	.search-wrap{
+		width: 1190px;
+		height: 121px;
+		margin-top: 0px;
+		padding-top: 24px;
+		padding-bottom: 9px;
+		box-sizing: border-box;
+		float: left;
+		overflow: hidden;
+		
+		
+	}
+	.search-left{
+		width: 190px;
+		height: 80px;
+		padding-top: 7px;
+		padding-left: 22px;
+		box-sizing: border-box;
+		float: left;
+		
+	}
+	
+	.search-center{
+		width: 630px;
+		height: 87px;
+		float:left;
+		margin-left: 68px;
+		margin-top: 0px;
+		
+	}
+	/*	搜索框名字*/
+	.search-name{
+		width: 630px;
+		height: 22px;
+		padding-left: 17px;
+		box-sizing: border-box;
+		position: relative;
+	}
+	/*	 搜索名字点击改变样式*/
+	.search-name ul li>a{
+		color: #f40;
+		font-size: 12px;
+		line-height: 23px;
+		text-decoration:none;   /*		去下划线*/
+		
+	}
+	
+	.search-name>ul>li{
+		float: left;
+		width: 36px;
+		height: 22px;
+		margin-right: 4px;
+		cursor: pointer;
+		text-align: center;
+		
+		
+	}
+	.search-name ul li .name11{
+		float: left;
+		width: 36px;
+		height: 22px;
+		margin-right: 4px;
+		cursor: pointer;
+		text-align: center;
+		border-top-left-radius:6px; 
+		border-top-right-radius: 6px;
+		background: linear-gradient(90deg,#ff9000 0,#ff5000 100%);             /*	渐变色*/
+		display: block;								/*		显示并占地*/
+		
+	
+	}
+	
+	.search-name ul li .name22{
+		float: left;
+		width: 36px;
+		height: 22px;
+		margin-right: 4px;
+		cursor: pointer;
+		text-align: center;
+		border-top-left-radius:6px; 
+		border-top-right-radius: 6px;
+		background: linear-gradient(90deg,#ff9000 0,#ff5000 100%);             /*	渐变色*/
+		display: none;								/*		隐藏并不占地*/
+		
+	
+	}
+	.search-name ul li .name33{
+		float: left;
+		width: 36px;
+		height: 22px;
+		margin-right: 4px;
+		cursor: pointer;
+		text-align: center;
+		border-top-left-radius:6px; 
+		border-top-right-radius: 6px;
+		background: linear-gradient(90deg,#ff9000 0,#ff5000 100%);             /*	渐变色*/
+		display: none;								/*		隐藏并不占地*/
+		
+	
+	}
+	
+	
+	.search-name ul li>div>a{
+		color: #f40;
+		font-size: 12px;
+		line-height: 23px;
+		text-decoration:none; 						  /*		去下划线*/
+		font-weight: 700;
+		color: #FFFFFF;
+		
+	}
+	
+	.name11{
+		display: block
+	}
+	
+	.search-name1{
+		display: none;
+	}
+
+	
+	/*搜索框*/
+	
+	.search-box{
+		width: 630px;
+		height: 40px;
+		
+	}
+	.search-panel{
+		width: 554px;
+		height: 36px;
+		float: left;
+		/*background: url(img2/camera.svg) no-repeat 98% center,         两张背景图片
+   		url(img2/search.svg) no-repeat 13px 12px ;	
+		background-size: 25px,15px; 									两张背景图片的尺寸大小*/
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+		border-bottom: #FF5000 solid 2px;
+		border-top: #FF5000 solid 2px;
+		border-left: #FF5000 solid 2px;
+		overflow: hidden;
+		position: relative;
+		
+	}
+	
+	.camer{
+		position: absolute;
+		width: 25px;
+		top:9px;
+		right: 10px;
+		z-index: 1000
+	}
+	
+	.search{
+		width: 15px;
+		position: absolute;
+		top: 11px;
+		left: 14px;
+		z-index: 2;
+	}
+	
+	.search-text{
+		
+		width: 472px;
+		height: 36px;
+		float: left;
+		text-indent:10px;
+		font-size: 12px;
+		padding-top: 5px;
+		box-sizing: border-box;
+		color: #000000;
+		outline-width:0px;					/*input外边距*/
+		border: none;
+		/*opacity:0.5  							透明度*/
+		
+/*		placeholder=""*/
+			
+	}
+	
+	.search-button{
+		width: 74px;
+		height: 40px;
+		float: right;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		background: linear-gradient(90deg,#ff9000 0,#ff5000 100%); 
+		color: #FFFFFF;
+		font-weight: 700;
+		text-align: center;
+		padding-top: 12px;
+		box-sizing: border-box;
+		cursor: pointer;
+		
+		
+	}
+	
+	.search-button1{
+		width: 74px;
+		height: 40px;
+		float: right;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		background: #ff5000; 
+		color: #FFFFFF;
+		font-weight: 700;
+		text-align: center;
+		padding-top: 12px;
+		box-sizing: border-box;
+		cursor: pointer;
+		display: none;
+	}
+
+	
+	.search-hots{
+		width: 630px;
+		height: 25px;
+		padding: 5px 41px 0 0;
+		box-sizing: border-box;
+		overflow: hidden;
+		
+	}
+	
+	.search-hots>ul>li{
+		margin-right: 4px;
+		float: left;
+		font-size: 12px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		cursor: pointer;
+	}
+	
+	.QRcode{
+		width: 76px;
+		height: 90px;
+		float: right;
+		margin-top: 0px;
+		margin-right: 110px;
+		cursor: pointer;
+		
+	}
+	
+	
+	 .search-text::-webkit-input-placeholder {			/* input中提示信息缩进placeholder*/
+ 		color: #9c9c9c;
+        padding-left:23px;
+    }
+	
+
+	
+/*	中间部分--标题*/
+	.center-title{
+		width: 1190px;
+		height: 30px;
+		float: left;
+		background: linear-gradient(90deg,#ff9000 0,#ff5000 100%);
+		
+	}
+	
+	.center-title ul li{
+		text-align: center;
+	}
+	
+	.center-title1{
+		width: 190px;
+		float: left;
+		background: #ff5000;
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		line-height: 30px;
+		font-weight:700;	
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+	}
+	
+	.center-title2{
+		float: left;
+		line-height: 30px;
+	}
+	
+	.center-title2>li{
+		float: left;
+		padding: 0 4px;
+		margin: 0 3px;
+		position: relative;
+	}
+	
+	
+	.center-title2>li>p{
+		float: left;
+		color: #fff;
+		font-size: 16px;
+		font-weight:700;
+		padding: 0 5px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		cursor: pointer;
+	}
+	
+	.center-title3>li{
+		float: left;
+		margin-right: 7px;
+		position: relative;
+	}
+	.center-title3>li>p{
+		float: left;
+		color: #fff;
+		font-size: 14px;
+		font-weight:700;
+		padding: 0 5px;
+		line-height: 30px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		cursor: pointer;
+	}
+	
+	.center-title4>li{
+		float: left;
+		margin-right: 7px;
+		position: relative;
+	}
+	.center-title4>li>p{
+		float: left;
+		color: #fff;
+		font-size: 14px;
+		font-weight:700;
+		padding: 0 5px;
+		line-height: 30px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		cursor: pointer;
+	}
+	
+	.screen{
+		float: left;
+		font-size: 14px;
+		color: #fff;
+		line-height: 30px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+	}
+	
+	.head1{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -12px;
+		margin: auto;
+		display: none;
+		
+	}
+	
+	.center-title2 li:hover .head1{
+		display: block;
+	}
+	.center-title3 li:hover .head1{
+		display: block;
+	}
+	.center-title4 li:hover .head1{
+		display: block;
+	}
+
+			/*中间内容左边标题栏*/
+	
+	.center-content-left{
+		width: 190px;
+		height: 522px;
+		float: left;
+		border-bottom: #ff5000 solid 1px;
+		border-left: #ff5000 solid 1px;
+		border-right: #ff5000 solid 1px;
+		box-sizing: border-box;
+		padding-top: 5px;
+		padding-bottom: 3px;
+		overflow: visible;
+		position: relative;
+		
+	}
+	.center-content-left img{
+		cursor: pointer;
+	}
+	
+	.center-content-left ul>li{
+		overflow: visible;				/*   内容会被修剪，并且其余内容是不可见的。*/
+		width: 188px;
+		height: 32px;
+		box-sizing: border-box;
+    	padding-left: 25px;
+    	padding-right: 19px;
+   	 	position: relative;
+    	color: #666;
+    	font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		float: left;
+    	
+		
+	}
+	
+	.center-content-left ul li>a{
+		text-decoration:none;      			/*	 取消a链接下划线*/
+		color: #666;
+		font-size: 14px;
+		font-weight:normal;
+		color:inherit; 
+		line-height: 32px;
+	}
+	
+	.center-content-left ul li>img{;
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		top: 0px;
+		bottom: 0px;
+		right: 10px;
+		margin: auto 0;
+	
+	}
+	
+	.center-content-left ul li a:hover{				
+		text-decoration:underline;					/*	 鼠标放在a标签上显示下划线*/
+		
+	}
+	
+	.center-content-left ul li:hover{				
+		color: #ff5000;					/*	 鼠标放在li标签上文本变红色*/
+		background: #ffe4dc;
+	}
+	
+	.center-leftcenter-wrap{			/*	 左中边框*/
+		width: 900px;
+		float: left;
+		
+	}
+	
+	
+		/*	左侧菜单内容*/
+	
+	.menu1{
+/*
+		width: 714px;
+		height: 522px;
+		padding: 0 0 0 18px;
+*/
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display:none ;
+
+			
+	}
+	
+	.click-menu1:hover .menu1{
+		display: block;
+	}
+	
+	.menu2{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu2:hover .menu2{
+		display: block;
+		top:-37px;
+	}
+	
+	
+	.menu3{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu3:hover .menu3{
+		display: block;
+		top:-69px;
+	}
+	
+	
+	
+	.menu4{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu4:hover .menu4{
+		display: block;
+		top:-101px;
+	}
+
+		.menu5{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu5:hover .menu5{
+		display: block;
+		top:-133px;
+	}
+	.menu6{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu6:hover .menu6{
+		display: block;
+		top:-165px;
+	}
+	.menu7{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu7:hover .menu7{
+		display: block;
+		top:-197px;
+	}
+	.menu8{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu8:hover .menu8{
+		display: block;
+		top:-229px;
+	}
+	.menu9{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu9:hover .menu9{
+		display: block;
+		top:-261px;
+	}
+	.menu10{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu10:hover .menu10{
+		display: block;
+		top:-293px;
+	}
+	.menu1-1{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+	.menu12 div:hover h5{
+
+		color:#ff5000; 
+	}
+	.menu11 p{
+		cursor: pointer;
+	}
+	.menu12 h5{
+		cursor: pointer;
+	}
+
+	.click-menu11:hover .menu1-1{
+		display: block;
+		top:-325px;
+	}
+	.menu1-2{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu12:hover .menu1-2{
+		display: block;
+		top:-357px;
+	}
+	.menu1-3{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu13:hover .menu1-3{
+		display: block;
+		top:-389px;
+	}
+	.menu1-4{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu14:hover .menu1-4{
+		display: block;
+		top:-421px;
+	}
+	.menu1-5{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu15:hover .menu1-5{
+		display: block;
+		top:-453px;
+	}
+	
+	.menu1-6{
+		width: 692px;
+		height: 518px;
+		float: left;
+		padding-left: 18px ;
+		border: 2px solid #F94A14;
+		position: absolute;
+		top: -5px;
+		left: 187px;
+		display: none;
+		
+	}
+	
+
+	.click-menu16:hover .menu1-6{
+		display: block;
+		top:-485px;
+	}
+
+	
+	
+	.menu11 {
+		width: 437px;
+		height: 500px;
+		float: left;
+		padding-top: 10px;
+		padding-right: 12px;
+		padding-left: 10px;
+		box-sizing: border-box;
+		overflow: hidden;
+			
+	}
+	
+	.menu111{
+		width: 415px;
+		height: 173px;
+		margin-bottom: 5px;
+		position: relative;
+	}
+	
+	.menu12{
+		width: 254px;
+		height: 518px;
+		float: left;
+		padding-top: 20px;
+		box-sizing: border-box;
+			
+	}
+	.menu11 div h5{
+		line-height: 36px;
+	}
+	
+	.menu11 div h5>p{
+    	font-size: 16px;
+    	color: #3c3c3c;
+		font-weight: 700;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+	}
+	
+	.menu11 div p{
+    	display: inline-block;
+		margin-right: 12px;
+		font-size: 12px;
+    	color: #666;
+		line-height: 26px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+	}
+	
+	.menu111 span{
+		font-size: 12px;
+    	right: 5px;
+		position: absolute;
+		font-weight: 400;
+		color: #3c3c3c;
+    	top: 12px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+	}
+	
+	.menu111more{
+		width: 8px;
+		position: absolute;
+		top: 15px;
+		right:-5px
+		
+	}
+	
+	.menu111 h5 p:hover {
+		
+		color: #ff5000;
+		cursor: pointer;
+	}
+	
+	.menu111 div:hover span{
+		color: #ff5000;
+		cursor: pointer;
+	}
+
+	
+	.menu111 div img{
+		color: #ff5000;
+		cursor: pointer;
+		
+	}
+	
+	.menu12 div{
+		float: left;
+		width: 97px;
+		height: 143px;
+		padding: 10px 0 0 20px;
+		overflow: hidden;
+	}
+	
+	.menu12 h3{
+		line-height: 18px;
+   		color: #333;
+    	font-size: 14px;
+    	text-align: center;
+    	font-weight: normal;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+	}
+	
+	.menu12 div img{
+		height: 98px;
+		background: #ededed;
+	}
+	
+	.menu12 div>h5{
+		
+		line-height: 26px;
+		font-size: 12px;
+		font-weight: normal;
+		color: #999;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		
+	}
+	
+	
+	.menu12 div img:hover{
+		background: #dcdcdc;
+	}
+	
+	.center-content-left>ul>li>div{
+		z-index: 2;
+		background: #FFFFFF;
+	}
+	
+     /*	 中间2大边框（轮播图）*/
+	.center2-wrap{
+		height: 512px;
+    	width: 520px;
+		float: left;
+		margin-left: 10px;
+    	margin-top: 10px;
+ 		z-index: 1;
+	}
+	
+	
+
+	.pic{
+            width: 520px;
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+    .content3{
+            width: 3120px;
+            height: 280px;
+			position: absolute;
+            left: 0px;
+            top: 0px;
+			
+
+        }
+     .content3 img{
+			width: 520px;
+            height: 280px;
+            float: left;
+			cursor: pointer;
+		 border-radius: 50%;
+        }
+	
+		 .dot {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            left: 50%;
+			margin-left: -35px;
+        }
+        .dot .dot-list {
+            float: left;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+        }
+        .dot-list .item {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 3px;
+            cursor: pointer;
+        }
+        .dot-list .active {
+            background-color: #ff6700;
+        }
+        .pic-left{
+            width: 21px;
+            height:30px;
+            background-color:rgba(100,100,100,0.5);  
+            position: absolute;
+            left: 0px;
+            top: 50%;
+			margin-top: -15px;
+            line-height: 30px;
+            text-align:left;
+            font-size: 20px;
+            color: #fff;
+			cursor: pointer;
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+			z-index: 1;
+			display: none;
+        }
+        .pic-right{
+            width: 20px;
+            height:30px;
+            background-color:rgba(100,100,100,0.5);  
+            position: absolute;
+            right:0px;
+            top: 50%;
+			margin-top: -15px;
+            line-height: 30px;
+            text-align: right;
+            font-size: 20px;
+            color: #fff;
+			cursor: pointer;
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+			z-index: 1;
+			display: none;
+        }
+	
+	
+/*		轮播图2*/
+	.pic2-wrap{
+    position: relative; 
+    width: 520px;
+    height: 230px;
+    margin-top: 1px;
+    overflow: hidden;
+		
+	}
+	
+	.pic2{
+	
+	line-height: 18px;
+	height: 18px;
+	font-size: 18px;
+    padding-top: 11px;
+    border-bottom: 3px solid #ff1648;
+    position: relative;
+    background-color: #f1f1f1;
+	}
+	
+	.pic2 img{
+		float: left;
+	}
+	
+	.pic2 em{
+	font-size: 12px;
+    color: #666;
+    position: relative;
+    float: left;
+	
+	}
+	
+	.pic2 storng{
+	position: absolute;
+    right: 0px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+	color: #666;
+	}
+	
+	.pic2 storng i{
+	position: absolute;
+    right: 12px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+	color: #ff1648;
+	}
+	
+
+	
+	
+		.pic3{
+            width: 520px;
+            height: 201px;
+            position: relative;
+        }
+    .content33{
+            width: 4000px;
+            height: 201px;
+			position: absolute;
+            left: 0px;
+            top: 0px;
+	
+        }
+		
+	.content33 img{
+		cursor: pointer;
+	}
+	
+	.content33-list li{
+		cursor: pointer;
+	}
+		 .dot3 {
+            position: absolute;
+			top: -3px;
+            width: 520px;
+            left: 0px;
+			overflow: hidden
+        }
+
+        .dot3-list .item3 {
+            float: left;
+            width: 86.67187114px;
+            height: 3px;
+            cursor: pointer;
+			
+        }
+        .dot3-list .active3 {
+            background-color: #000;
+			z-index: 10;
+        }
+        .pic3-left{
+            width: 21px;
+            height:30px;
+            background-color:rgba(100,100,100,0.5);  
+            position: absolute;
+            left: 0px;
+            top: 50%;
+			margin-top: -15px;
+            line-height: 30px;
+            text-align:left;
+            font-size: 20px;
+            color: #fff;
+			cursor: pointer;
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+			z-index: 1;
+			display: none;
+        }
+        .pic3-right{
+            width: 20px;
+            height:30px;
+            background-color:rgba(100,100,100,0.5);  
+            position: absolute;
+            right:0px;
+            top: 50%;
+			margin-top: -15px;
+            line-height: 30px;
+            text-align: right;
+            font-size: 20px;
+            color: #fff;
+			cursor: pointer;
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+			z-index: 1;
+			display: none;
+        }
+	
+	
+	.content33>div{
+		width: 520px;
+		height: 201px;
+		float: left;
+	}
+	
+	
+	.content33-3>img{
+		margin-top: 22px;
+		margin-left: 7px;
+	}
+		
+	.content33-2>img{
+		margin-top: 6px;
+		margin-left: 6px;
+	}
+	.content33-1 img{
+		width: 84px;
+		margin-top: 10px;
+		
+		
+	}
+	
+	.content33-list>li{
+		 float: left;
+   		 width: 129px;
+   		 height: 57px;
+   		 text-align: center;
+  		 padding: 5px 0;
+  		 border-right: 1px solid #ebebeb;
+  		 border-bottom: 1px solid #ebebeb;
+   		 overflow: hidden;
+		
+	}
+	
+	
+/*	轮播图左边*/
+	.center-content-left2{
+	margin-right: 10px;
+    margin-top: 10px;
+    width: 160px;
+    height: 512px;
+
+	float: right;
+	}
+	
+	.center-content-left2 h5{
+	font-size: 12px;
+    font-weight: 400;
+    background: #f1f1f1;
+    color: #a1a1a1;
+    line-height: 24px;
+    padding-top: 6px;
+	}
+	.center-content-left2 img{
+		cursor: pointer;
+	}
+	
+	
+/*	轮播图下面*/
+	
+	.center-content-below{
+	float: left;
+	position: relative;
+    padding: 14px 14px 12px 20px;
+    margin-top: 10px;
+    background: #fff;
+	}
+	
+	.below1{
+	width: 180px;
+    height: 73px;
+    float: left;
+	padding-top: 15px;
+	box-sizing: border-box;
+	}
+	.below1 p{
+	line-height: 24px;
+    color: #999;
+    font-weight: 400;
+	font-size: 12px;
+
+	}
+	
+	
+	.below2-wrap{
+	height: 73px;
+    overflow: hidden;
+    width: 676px;
+	position: relative;
+	}
+	.below2{
+		height: 292px;
+		width: 676px;
+		position: absolute;
+		
+	}
+
+	.below2-1{
+		float: left;
+		width: 676px;
+		height: 73px;
+		cursor: pointer;
+	}
+	
+	.below2-1:hover .beilow2-1 img{
+		background-color:rgba(255, 255, 255, 0.3) 
+	}
+	.below2-1:hover h4{
+		color:#ff5000; 
+	}
+	
+	.below-more:hover {
+		color:#ff5000;
+		cursor: pointer;
+	}
+	
+	.below2-1:hover img{
+		float: left;
+		 opacity:0.7;
+/*		改变图片透明度*/
+	}
+	
+	
+	
+	.below2-1 img{
+		float: left;
+		width: 130px;
+		height: 73px;
+	}
+	
+	.below2-1 h4{
+	margin-top: 2px;
+    margin-left: 144px;
+    color: #333;
+    height: 28px;
+    display: block;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 500;
+	overflow: hidden;
+	font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;	
+	}
+	
+	.below2-1 p{
+	margin-left: 144px;
+    color: #999;
+    height: 36px;
+    overflow: hidden;
+    line-height: 18px;
+    font-size: 14px;
+	font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+	}
+	
+	.below-more{
+		position: absolute;
+		right: 0px;
+
+   	 	right: 5px;
+   		
+   		line-height: 20px;
+    	font-weight: 400;
+    	z-index: 1;
+    	background: #fff;
+    	color: #999;
+    	width: 40px;
+    	text-align: right;
+		
+	}
+	
+	.below-more p{
+		float: right;
+		font-size: 12px;
+		margin-right: 2px;
+	}
+	
+	.below-more img{
+		margin-top: 6px;
+		float: right;
+		width: 7px;
+	}
+	 
+	
+	.center-rightcenter-wrap{
+		float: right;
+    	width: 290px;
+    	margin-top: 10px;
+		
+	}
+	
+	.rightcenter-wrap{
+		width: 290px;
+		height: 132px;
+		background:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkQAAAFUCAMAAADyANNuAAAAQlBMVEX////R7P/b7///0vHp9f/9/v/k9P//3PXT7f/x+f/g8v/s9//6/f/3+//0+//V7//d8f//5vj/7/v//P7/+P3/9Px0E+7wAAALb0lEQVR42uzd3W7jIBAFYKAM4R+ctO//qtutojhObIPBTivlfNLe7e7VEQwzBLNdCT7LMgCECBAiQIgAIUKIACEChAgQIkCIECJAiAAhAoQIECKECBAiQIgAIQKECCEChAgQIkCIACFCiGArkprPSoEB1HCaL7KeAZQEwddoyQCKy1CBwGIEa8jyMh0ZwBISvIY2DGA5Q0gRdMmcI0XQRfF6Gh0jmGH4FoIYwAOv+SboF8ETy79hQ4MOkW+VGcBE5puh5wgTga/BxRCooHgDDNHgDmn+Awc0aGZ4C8EAbhRvgoYjjARvggkajDRfoK1SCUURlPn1W4xO45APre3qROyHQ2UNrYczx67SQsgYwJVbCpFxxsToKSNE0N0mQoigHCJ0G6FP5G0UA7g74mN4Bjs0G3GjCF4/9tCYncFI8hYJIYLeylonTGBhlHgbgbIIxv2slcKeBuNF/UbY0+DKco7FCF6yFOFBULg3nHuvWY+0Y/CGho+PSYoo8R+YgECly3eGHlJkeBeLwujdnD5+nNeP+XixCAoZekqR5V0Sflb9Ri63DE1TRBkpgvoMjQY28ryLxkT2PTM0TVHmqIugLkOLKTK8U0aK3ipDo2Fmmp+EktI545yUVmhcu4abz9PHjGFyzNdCGWJTwanEq6B3/YYZmqaItDXE5gWV8PmYI5GPxkmplLU5i/9yttYqKZ2Jnv5Khj6WnNgVsTXG4tLsIYKRKot1WUkT/myGxhSVeaXxIOiuKDol6ikX/lhRPRpYrWDx9tVuyCixWVaGfnXcseDMNjCJr9LoXHcmqExG+mspOrNNSGFD6xak6JKlZ79k6MnQyGj8NLZLVKKfir93kaicoTKf8FxIO2PFPmz8I2vRefHQoOw3JU0g9oQyWo6NohX7sfEvpOiLPTNK8Hs6y8AekEWzqEVQYl/K/3qKvmo700LSY4qwFG1GUuxP0u+m6GtDG0g/ZJ4ylqKNTBZHyPE3U/T51JDma/Q085SwFB2wDGVr1Tf7/4+tTJ2io+MvHLGp83yGnOYFaZL5oHFAqxdzaTbmTPD0PJf1wbjSbC2bw7+qqFWYSdFndZEz0nKST/SK6tm1iVik3imbpON/IZ0NTVL0lCGfGn5hptC2rhbErLxlhEFRZrHAenYYNV8Ynx8yFFLLTWpKeIyvmtmn6xylWGBe8oDV8s4ZdNt9fINhfj0lprIj1oKcFbPca57SS9LPjzFa7+Nn7GfVKIs71uw/OVH0mq8q6plOOaXmL1EH7Gf1QuE41R8jS696XjhJ6nzjyrEbi/2s4DJc2JUTV45YL3KvKq89nzU98zu+lR7/ecDPh9Z9nk7DQ1kkPduDl+JZDmxvpqKP4zXfLLMbgX7jmq/Tt+G+LMrx2AZmeNWHplPvcyCuvI7hmuy38+nHmV3FfbuCJF+QolR+2ix0vqdPGkXRouF09cWu/Au6T5HtiXR5lbCc9y1FFm/wLZbUp5tPdhBvD05RLO9mXvd+d9GhU7RUUt+7sGoUQowh+Mq/rY5tXrvyyUnyRvEWQ3zec7mkHg2sBhlpxY2VxrMyd2iKVLlcSbyRKv4X7K1dTg+Gtp+iWedbCiN3+Ev5ftJI6t3PLI5nKyvR6Fxs+yyQgRWEfNzdEMFn6cmG1yqwK4k7RSvH+9Fn+71H5beX19YfesIXNWez5DyjoHT5fGZwxq9I0XDpuH5dHpSQPerutS6em1Lpuy9eFIuigIvWE2MRM1RWRKREkfXbD2mO9aNyB0cXy2YSpdEHoVF0xyth6SlF52JFU2a2p0j5A0NUPJ7TlmaTRoim+5J8PKJ9sRVRVHLbU5TNUSFyxZmH3FSea8zx/7F3r7uR2zAYQEWBInSXWvT9n7XTJOhsUnsoS+MCa3/nbxabBZawqAvJL1l+fDT+0lPqYBXjyxOfUCKb1SCqIzmxaOdADUH0Mz0uz42+klJXa8+NIhtODqIwsjtn2ubwJfqmxK0nhn/+MV4Eogvq4fWGWMw8d+6XCMvZi7NCmXh3PaKoh9dbOJ+YWJeRZ4lNy4mwOzOZ57bXYjdICg+J+8wr6tLfHEZqiOSBxotB253l2wfR5o1FnXsNxPX547IRRzzxNmQpjBptivo5kXVqOVHX1sR07+Z5PU8sZpzV5/hlunOE1DfenVntTzzYbD7URjsE1x4POUW7oxoND2TAWex3cuADpz8J0HW1Jkxoj5dQauq0K2m7t2KuLgexC7Xxeaz2kI+vkyXaPRKyOUTU/95A07JWBZvNlbmS4pEuHXp0yOC+XVabIcVUnBnGaraSSTV76+EvHD+BZb0hpxuODZ4o5yjRvvLs6KoJ+vNnu/yysVyy8Iz3SOxWk9zxQo3uhk8C0miJrCoK/8vsyHqhfDrtTZqY35mdF8tMl5A6nj31iSN0ndmj14Q5T1Os+i1LdwiihXtzdyTRSXPliaG/IYi6vp4JTQlq8WO9ZRAlZwbVI3HhJh+bubQeRKyvZ9mvfYiELplXn99TOh3acfH2n9ZlXg2iSjvS4qcoqMthv18QcZ5unBYOtXyMZ/Q+Pl5H3ZQWV4qoJ+Z8syDqyS20k83H/kEHf5VLfS6IxntQVTrKZ/2lf7lVEElwK7+hH/xw5RNGGx0vpKZm5hc0H0b+/vsEUediDnMHkxxe7R6TU58Mojw0OaHTITywFMpdgqhzNQr96IcP5uHVTKncZ4LIdHVJ2i8LWmkHUW8RRDEVM8nxL8JIAPyimFn7N34zDfcoTvaPjSPtr5u5ehB1SdVdaYy61udKX9CypUHiRkKPrxtEUYRDdeb3lmtgib0rQaS/GCrK+DItOgRzzW+ijM62Yz+0L3tKGGt+G1HtJPylNlLEbJ6qp13FwKVU2idHxua1MDpTphu4mD4eRY7391vJ/YghjMzDp2j7UNClvhEePgbzTfWEjAhZ0c9Rik85SaMnv3ExFDwRMqLb0Efi2bz9Fj3xQwrF7T1TwmiYW2Ft367YHDmMSWf34po6HXhcaPSAmfi3E+g1n8ygHOkDRuLfj5DCVqN7HgHgwgML2hYbjCKLJyIsZtihvdA4m30hevqEI6K7SjTCprIzusTTAIud2bUJjWnfByS5ksR6GuJxzHhxztI432x/sM3TOH/7aR6IIg2Sani2X1x1+0aft1YaLcGVGRiTG2IIVuWGGIJV2SKnhlWu0xjs7WGXE3qzhjfV95M8vVPHxT22+ms8UmosaVjKYJJe7oorV9Akjy8RrGFs72ER45AIFgmOGmER03t55EUoQsMeDZbqPnR4oA8/OYuXILCI6RRIrrGYLWtY0O7D4nksLAo0wHdJoeTsXC418FftIjo5wKemB9BGIbWrbPEpgrEP0YsRpoUboUMaGBNXmsu41PBYH7JXep0rHHv0SLu7pE8P+silQ0qJH4T/kVIIteSPn2eL1sOf0Fv/v2Jiibb5151ConBDMf6tOU9vgJEeHzCf4RzeADrurcJ5Ix404hYWVJHQKg0WWSJCrzRY0uhkFknRxZVI54t4s48QWtdxbn1RWej/I1jUUHi/zGOXdjm50wD0vYJ91dMAFMXCyFKGJQ3mMO3BySMMxxCiCE68t8dVGry73BXNQuDF9GAdaqvhZUKEtAimZU+nQm01PkRbmu0iXzVCXz4riFik24Y2D3g+tM/byCkUpyVZJSSO1tOwZuAGtR3eSirO6OamnOP64+qrme9cnZnjKneP1PriOr3WpDqzxlVpKGi8bUrkpZr3qOKRFF2WH2tDtM4li6rYi7LbPNlg3i1Y8nYT+s0AAAAAAAAAwN/swYEAAAAAAJD/ayOoqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqirtwQEJAAAAgKD/r9sRqAAAAAAAAAAAAAAAAMBIfDmj3Ij2F4sAAAAASUVORK5CYII=");
+		background-size:290px 145px;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		padding: 3px 0 10px 0;
+
+	}
+	
+	
+	
+	
+	.hi{
+		width: 50px;
+		height: 50px;
+		display: block;
+		margin: 0 auto;
+		border-radius: 50%;
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+	
+	.headtext{
+		display: block;
+    	line-height: 17px;
+    	height: 17px;
+		text-align: center;
+		font-size: 12px;
+		
+	}
+	
+	.right2-wrap{
+		text-align: center;
+	}
+	
+	.headtext2{
+		display: inline-block;
+		border-radius: 9px;
+    	background: #ffe4db;
+    	padding: 0 10px 0 18px;
+		position: relative;
+	}
+	
+	.headtext2 img{
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		left: 0px;
+		top: 1px;
+		
+	}
+	
+	
+	.headtext2 p{
+		float: left;
+		font-size: 12px;  
+		color: #ff5000!important;
+		line-height: 16px;
+		margin-bottom: 1px;
+			
+	}
+	
+/*	注册*/
+	
+	.register{
+		
+		text-align: center;
+		height: 30px;
+    	overflow: hidden;
+    	margin-top: 10px;
+	}
+	.register p{
+		display: inline-block;
+		margin-right: 7px;
+
+		color: #fff;
+        background-image: linear-gradient(to right,#ff5000 0,#ff6f06 100%);
+		border-radius: 4px;
+		font-weight: 700;
+		font-size: 14px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		padding: 5px 20px
+	}
+	
+	.register p:hover{
+		cursor: pointer;
+	}
+	
+	.hi:hover{
+		cursor: pointer;
+	}
+	
+	.headtext2:hover{
+		cursor: pointer;
+	}
+	
+	
+	.rightcenter2-wrap{
+		width: 290px;
+		height: 26px;
+		text-align: center;
+		background: #ffe4dd;
+		position: relative;
+	}
+	
+	.rightcenter2-wrap p{
+		display: inline-block;
+		color: #f40;
+		line-height: 26px;
+		font-size: 12px;
+	}
+	.rightcenter2-wrap img{
+		position: absolute;
+		top:9px;
+		right: 50px
+		
+	}
+	
+	.rightcenter2-wrap:hover{
+		cursor: pointer;
+	}
+	
+	
+/*	公告*/
+	.rightcenter3-wrap{
+		height: 98px;
+		width: 290px;
+		padding-top: 10px;
+		overflow: hidden;
+	}
+	
+	.right-title{
+		position: relative;
+   		height: 24px;
+    	margin-top: 4px;
+/*    	overflow: hidden;*/
+    	margin-right: -2px;
+    	padding: 0 8px;
+		
+	}
+	
+	.right-title li{
+		float: left;
+    	line-height: 20px;
+    	width: 32px;
+    	text-align: center;
+    	margin: 0 11px;
+		cursor: pointer;
+	}
+	
+	.right-title li p{
+		font-size: 12px;
+		color: #3C3C3C;
+	}
+	
+	
+	.right-title-content{
+		display: block;
+	}
+	
+	.right-title-content>div{
+		display: block;
+		margin: 0 12px;
+   		height: 50px;
+    	overflow: hidden;
+    	padding-top: 9px;
+    	padding-bottom: 6px;
+	}
+	
+	.notice ul li:first-child{
+		width: 260px;
+		color: #3C3C3C;
+	}
+	
+	.right-title-content li{
+		float: left;
+    	height: 25px;
+    	width: 130px;
+    	overflow: hidden;
+
+	}
+	
+	.right-title-content p{
+		display: inline-block;
+		font-size: 12px;
+		color: #3C3C3C;
+		line-height: 25px;
+	}
+	
+
+	
+	.right-title-contentred p{
+		color:#ff5000!important;
+	}
+	
+	.right-title-content p:hover{
+		color: #ff5500;
+	}
+	
+	.right-title-content  p{
+		cursor: pointer;
+	}
+	
+	.notice1{
+		font-weight: 700;
+		border-bottom: #ff5000 solid 2px;
+	}
+	
+	
+/*	充话费、旅行等界面*/
+	.rightcenter4-wrap{
+		float: left;
+		width: 290px;
+		height: 232px;
+		border-top: 1px solid #f4f4f4;
+	}
+	
+		
+	.p-wrap{
+		position: relative;
+
+	}
+
+	.p-wrap>ul>li{
+		float: left;
+		width: 72px;
+		height: 77px;
+		box-sizing: border-box;
+		z-index: 1;
+		border:#fff solid 1px;
+		background: #fff;
+/*		transition: all 1s;动画一秒*/
+		cursor: pointer;
+	}
+	
+	.p-wrap>ul>li:hover p{
+		color: #f40;
+	}
+	
+	
+	.rencai{
+		position: absolute;
+		top: 0px;
+				
+	}
+	
+	
+	.p-wrap>ul>li>div{
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	
+
+	.p-wrap>ul>li>div>img{
+		width: 24px;
+		height: 24px;
+		margin-top: 11px
+	}
+	.p-wrap>ul>li>div>p{
+		color: #333;
+   		line-height: 24px;
+		font-size: 12px;
+	}
+	
+	
+/*	充话费相关信息*/
+	.list1-1{
+		position: absolute;
+		background: #fff;
+		top: 76px;
+		left: 0px;
+		z-index: 1;
+		padding-top: 4px;
+		height:159px ;
+		width:287px ;
+		border: 1px solid #f40;
+		display: none;
+		box-sizing: border-box;
+		overflow: visible;
+	}
+	.list1-1>.line{
+		position: absolute;
+		background: #fff;
+		top: -1px;
+		left: 0px;
+		z-index: 10;
+		height:1px ;
+		width:70px ;
+/*		transition: all 0.4s;动画0.4秒*/
+	}
+	
+	.list1-11 {
+		padding:0 15px;
+		
+	}
+	.list1-11>div{
+		float: left;
+		text-align:left;
+	}
+	
+	.a1{
+		height: 26px;
+ 	    line-height: 26px;
+	}
+	
+
+	.a1 p{	
+		display: inline-block;
+		color: #666;
+		padding: 0px 10px;
+		font-size: 12px;
+
+		
+	}
+	
+	.b1{
+		float: left;
+		padding-top: 4px;
+	}
+	
+	.b1 input{
+		width: 165px;
+		padding: 2px 18px 2px 1px;
+		text-indent: 2px;
+		font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+		
+	}
+	
+	.b12::-webkit-input-placeholder{
+		color: black;
+ 		position: relative;
+		
+	}
+	
+	.close{
+		position: absolute;
+		right: 6px;
+		width: 8px;
+		top: 8px;
+		line-height: 16px;
+		
+	}
+
+	.phoneList{
+		position: absolute;
+		right: 92px;
+		top: 38px;
+		width: 18px;
+	}
+	.phoneMore{
+		position: absolute;
+		right: 92px;
+		top: 64px;
+		width: 18px;
+		z-index: 2;
+		text-align: 
+	}
+	.c1{
+		margin: 6px 0;
+		height: 17px;
+
+		
+	}
+	
+	.c1>span:first-child{
+		color: #666;
+		line-height: 16px;
+		margin-right: 8px;
+		font-size: 12px;
+		float: left;
+	}
+	
+	.c1>span:nth-child(2){
+		color: #999;
+		margin-right: 4px;
+		font-family: arial;
+		line-height: 16px;
+		font-size: 12px;
+		float: left;
+	}
+	
+	.c1>strong{
+		float: left;
+		color: #f60;
+		font-weight: 700;
+		font-family: verdana,arial;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	
+	.d1 p{
+		display: inline-block;
+		margin:3px 10px;
+		line-height: 21px;
+		color: #fff;
+		font-weight: 700;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		font-size: 12px;
+	}
+	
+	.d1{
+		display: inline-block;
+		background: #f40;
+		border-radius: 2px;
+		cursor: pointer;
+		
+	}
+	
+	.Price{
+		position: relative;
+	}
+	.number{
+		position: absolute;
+		background: #fff;
+		border:# solid 1px;
+		right: 0px;
+		top: 25px;
+		display: none;
+		
+	}
+	
+	.number tr td{
+		border: #a9a9a9 solid 1px;
+		width: 95px;
+		height: 26px;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 26px;
+		padding:0 0 0 6px;
+	}
+	
+	.number tr td span{
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 26px;
+	}
+	
+	.number tr td:hover{
+		background: #ffece5;
+		color: #f40;
+	}
+	
+	.close{
+		cursor: pointer;
+	}
+
+	
+	
+/*	阿里app*/
+	
+	.ali_icon{
+		float:left;position: relative;
+	}
+	
+   .ali_icon ul li>img {
+    width: 32px;
+    height: 32px;
+	}
+	
+	.ali_icon ul{
+		padding-left: 23px;
+		float: left;
+	}
+	
+	.ali_icon ul li{
+	text-align: center;	
+	position: relative;
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 21px;
+    margin-bottom: 8px;
+	cursor: pointer;
+}
+	
+	.ali_icon h3{
+	float: left;
+    font-size: 14px;
+    padding-left: 14px;
+	font-weight: 700;
+	color: #3C3C3C;
+    height: 30px;
+    line-height: 30px;
+	font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+}
+	.ali_more{
+		position: absolute;
+		right: 3px;
+		top: 5px;
+		cursor: pointer;
+		
+	}
+	
+	.ali_more:hover{
+		color: #f40;
+		
+	}
+	
+	.ali_more p{
+		float: left;
+    font-size: 12px;
+    font-weight: 400;
+	}
+	
+	.ali_more img{
+		float: left;
+		width: 8px;
+		margin: 3px;
+	}
+
+	.taobao_QRcode img{
+		background: #fff;
+		position: absolute;
+		top: -110px;
+		left: -30px;
+		z-index: 2;
+		display: none;
+	}
+	
+	.ali_icon ul li:first-child:hover .taobao_QRcode img{
+		display: block;
+	}
+	
+/*		淘宝第二版面   */
+	.second_pages{
+		display: block;
+		float: left;
+		width: 1190px;
+		margin-top: 10px;
+		margin: 0 auto;
+
+		height: 668px;
+	}
+	
+	.second_pages1{
+		float: left;
+		width: 590px;
+		height: 658px;
+		position: relative;
+		clear:both;
+
+	}
+	
+	.second_pages2{
+		width: 590px;
+    	float: left;
+    	margin-left: 10px;
+    	height: 658px;
+
+	}
+	
+	.second_pages1>div{
+		width: 570px;
+		height: 24px;
+		padding-left: 20px;
+		padding: 20px 0px;
+		position: relative;
+	}
+	
+	.youhaohuo{
+		float: left;
+		width: 74px;
+		margin-right: 8px;
+		clear:both;	
+	}
+	
+	
+	
+	
+	.aiguangjie{
+		float: left;
+		width: 56px;
+		margin-right: 8px;
+	
+	}
+	
+	
+	
+	.youhaohuo_QRcode{
+		float: left;
+		margin-top: 5px;
+		margin-right: 3PX;
+			
+	}	
+	.second_pages1>div>p{
+		float: left;
+		line-height: 24px;
+    	height: 24px;
+    	color: #999;
+    	font-weight: 400;
+		font-size: 12PX;
+	}
+	
+	.second_pages1>div>div>p{
+		position: absolute;
+		right: 20px;
+		cursor: pointer;
+		line-height: 24px;
+		font-size: 12px;
+    	color: #999;
+	}
+	
+	.yhh_11{
+		cursor: pointer;
+		background: #4f4f4f;
+	}
+	
+	.yhh_11 img{
+    	height: 180px;
+    	display: block;
+	}
+	
+	.yhh_11 img:hover{
+/*		透明度设置后，可以看到后面的div背景色*/
+	    opacity: 0.9;
+	}
+	
+	
+	.yhh_12{
+		overflow: hidden;
+    	padding: 0 4px 0 6px;
+	}
+	
+	.yhh_12>h4{
+		margin-top: 5px;
+		color: #3C3C3C;
+    	font-size: 16px;
+    	height: 28px;
+    	overflow: hidden;
+    	line-height: 28px;
+    	font-weight: 500;
+	}
+	
+	.yhh_12>p{
+		width: 170px;
+		line-height: 24px;
+    	color: #999;
+    	font-size: 14px;
+    	overflow: hidden;
+    	height: 24px;
+	}
+	
+	.yhh_13{
+		width: 170px;
+		height: 22px;
+		padding: 0 4px 0 6px;
+		line-height: 22px;
+    	height: 22px;
+    	margin-top: 12px;
+    	color: #35b1ff;
+		font-size: 14px;
+    	overflow: hidden;
+		font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+	}
+	
+	.yhh_13 img{
+		display: inline-block;
+		margin-top: 
+	}
+	.yhh_13 p{
+		display: inline-block;
+		font-size: 14px;
+	}
+	
+	.youhaohuo_1 li{
+		display: block;
+    	float: left;
+    	width: 180px;
+    	overflow: hidden;
+    	margin: 0 4px 17px 0;
+		height: 271px;
+		
+	}
+		.second_pages2>div{
+		width: 570px;
+		height: 24px;
+		padding-left: 20px;
+		padding: 20px 0px;
+		position: relative;
+	}
+		.second_pages2>div>p{
+		float: left;
+		line-height: 24px;
+    	height: 24px;
+    	color: #999;
+    	font-weight: 400;
+		font-size: 12PX;
+	}
+	
+	.second_pages2>div>div>p{
+		position: absolute;
+		right: 20px;
+		cursor: pointer;
+		line-height: 24px;
+		font-size: 12px;
+    	color: #999;
+	}
+	
+	
+
+	
+	
+	</style>
+</head>
+
+<body >
+
+	<div class="all-wrap">
+		<div class="top-wrap">
+			
+			<div class="top-left-wrap">
+				<div>	
+					<p>中国大陆</p>	
+					<img src="img2/top-left-p.svg" alt="更多">
+					<div class="top-left-menu">
+						<ul>
+							<li>全球</li>
+							<li>中国大陆</li>
+							<li>香港</li>
+							<li>台湾</li>
+							<li>澳门</li>
+							<li>韩国</li>
+							<li>马来西亚</li>
+							<li>澳大利亚</li>
+							<li>新加坡</li>
+							<li>新西兰</li>
+							<li>加拿大</li>
+							<li>美国</li>
+							<li>日本</li>
+						</ul>
+					 </div>
+				</div>
+
+				<div>
+				<span><p style="color: red">亲，请登录</p></span>
+				<span><p class="top-text">免费注册</p></span>	
+				</div>
+				
+				<div>
+				<p class="top-text">手机逛淘宝</p>
+				</div>
+			</div>
+				
+				
+				<div class="top-right-wrap">
+					
+					<div>
+						<img class="img-more2" src="img2/more.svg" alt="更多">
+						<p class="top-text">网站导航</p>
+						<img class="img-more"  src="img2/top-left-p.svg" alt="更多">
+						<div class="top-menu-one1">
+						    <div>
+							<div><h4 style="color: #fc4200">主题市场</h4></div>
+								<div>
+									<ul class="top-menu-content1">
+										<li><p>女装</p></li>
+										<li><p>男装</p></li>
+										<li><p>内衣</p></li>
+										<li><p>鞋靴</p></li>
+										<li><p>箱包</p></li>
+										<li><p>婴童</p></li>
+										<li><p>家电</p></li>
+										<li><p>数码</p></li>
+										<li><p>手机</p></li>
+										<li><p>美妆</p></li>
+										<li><p>珠宝</p></li>
+										<li><p>眼镜</p></li>
+										<li><p>手表</p></li>
+										<li><p>运动</p></li>
+										<li><p>户外</p></li>
+										<li><p>乐器</p></li>
+										<li><p>游戏</p></li>
+										<li><p>动漫</p></li>
+										<li><p>影视</p></li>
+										<li><p>美食</p></li>
+										<li><p>鲜花</p></li>
+										<li><p>宠物</p></li>
+										<li><p>农资</p></li>
+										<li><p>房产</p></li>
+										<li><p>装修</p></li>
+										<li><p>建材</p></li>
+										<li><p>家具</p></li>
+										<li><p>百货</p></li>
+										<li><p>汽车</p></li>
+										<li><p>二手车</p></li>
+										<li><p>办公</p></li>
+										<li><p>定制</p></li>
+										<li><p>教育</p></li>
+										<li><p>卡券</p></li>
+										<li><p>本地</p></li>
+									</ul>
+								</div>
+							</div>
+							
+							
+							<div>
+							<div><h4 style="color: #9fb838">特色市场</h4></div>
+								<div>
+									<ul class="top-menu-content2">
+										<li><p>爱逛街</p></li>
+										<li><p>美妆秀</p></li>
+										<li><p>全球购</p></li>
+										<li><p>腔调</p></li>
+										<li><p>淘女郎</p></li>
+										<li><p>星店</p></li>
+										<li><p>极有家</p></li>
+										<li><p>阿里拍卖</p></li>
+										<li><p>淘宝众筹</p></li>
+										<li><p>飞猪</p></li>
+										<li><p>亲宝贝</p></li>
+										<li><p>闲鱼</p></li>
+										<li><p>农资</p></li>
+										<li><p>天天特卖</p></li>
+										<li><p>Outlets</p></li>
+										<li><p>俪人购</p></li>
+										<li><p>聚名品</p></li>
+										<li><p>淘抢购</p></li>
+										<li><p>全球精选</p></li>
+										<li><p>非常大牌</p></li>
+										<li><p>试用</p></li>
+										<li><p>量贩团</p></li>
+										<li><p>阿里翻译</p></li>
+									</ul>
+								</div>
+							</div>
+							
+							
+							<div>
+							<div><h4 style="color: #d75696">阿里APP</h4></div>
+								<div>
+									<ul class="top-menu-content3">
+										<li><p>爱逛街</p></li>
+										<li><p>美妆秀</p></li>
+										<li><p>全球购</p></li>
+										<li><p>腔调</p></li>
+										<li><p>淘女郎</p></li>
+										<li><p>星店</p></li>
+										<li><p>极有家</p></li>
+										<li><p>阿里拍卖</p></li>
+										<li><p>淘宝众筹</p></li>
+										<li><p>飞猪</p></li>
+										<li><p>亲宝贝</p></li>
+										<li><p>闲鱼</p></li>
+										<li><p>农资</p></li>
+										<li><p>天天特卖</p></li>
+										<li><p>Outlets</p></li>
+										<li><p>俪人购</p></li>
+										<li><p>聚名品</p></li>
+										<li><p>淘抢购</p></li>
+										<li><p>全球精选</p></li>
+										<li><p>非常大牌</p></li>
+										<li><p>试用</p></li>
+										<li><p>量贩团</p></li>
+										<li><p>阿里翻译</p></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div>
+							<div><h4 style="color: #2e9fdb">精彩推荐集</h4></div>
+								<div>
+									<ul class="top-menu-content4">
+										<li><p>余额宝</p></li>
+										<li><p>大牌捡宝</p></li>
+										<li><p>淘公仔</p></li>
+										<li><p>浏览器</p></li>
+										<li><p>淘宝香港</p></li>
+										<li><p>淘宝台湾</p></li>
+										<li><p>淘宝全球</p></li>
+										<li><p>淘宝东南亚</p></li>
+										<li><p>闺蜜淘货</p></li>
+										<li><p>大众评审</p></li>
+										<li><p>淘工作</p></li>
+										<li><p>阿里巴巴认证</p></li>
+									</ul>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					
+					<div class="top-menu-one2">
+						<p class="top-text">联系客服</p>
+						<img class="img-more"  src="img2/top-left-p.svg" alt="更多">
+						<div class="top-right-meun2">
+						<ul>
+							<li><p>消费者客服</p></li>
+							<li><p>卖家客服</p></li>
+						</ul>
+						
+						</div>
+						
+					</div>
+					
+					<div class="top-menu-one3">
+						<p class="top-text">千牛买家中心</p>
+						<img class="img-more"  src="img2/top-left-p.svg" alt="更多">
+						<div class="top-right-meun3">
+						<ul>
+							<li><p>免费开店</p></li>
+							<li><p>已卖出的宝贝</p></li>
+							<li><p>售出中的宝贝</p></li>
+							<li><p>卖家服务市场</p></li>
+							<li><p>卖家培训中心</p></li>
+							<li><p>体检中心</p></li>
+							<li><p>问商友</p></li>
+						</ul>
+						
+						</div>
+					</div>
+					
+					<div>
+						<p style="color:#CCCCCC">|</p>
+					</div>
+					
+					<div>
+						<p class="top-text">商品分类</p>
+					</div>
+					
+					<div class="top-menu-one5">
+						<div class="collenction3">
+						<img class="img-more3" src="img2/Collection1.svg" alt="收藏夹">
+						<img class="collenction2" src="img2/Collection2.svg" alt="收藏夹">
+						</div>
+						<p class="top-text">收藏夹</p>
+						<img class="img-more"  src="img2/top-left-p.svg" alt="更多">
+						
+						
+						<div class="top-right-meun5">
+						<ul>
+							<li><p>收藏的宝贝</p></li>
+							<li><p>收藏的店铺</p></li>
+						</ul>
+						
+						</div>
+					</div>
+					
+					<div>
+						<img class="img-more4" src="img2/Shopping-Cart.svg" alt="购物车">
+						<p class="top-text">购物车</p>
+						<img class="img-more"  src="img2/top-left-p.svg" alt="更多">
+					</div>
+					
+					<div class="top-menu-one7">
+						<p class="top-text">我的淘宝</p>
+						<img class="img-more"  src="img2/top-left-p.svg" alt="更多">
+						<div class="top-right-meun7">
+						<ul>
+							<li><p>已买到的宝贝</p></li>
+							<li><p>我的足迹</p></li>
+						</ul>
+						
+						</div>
+					</div>
+
+				
+				
+				</div>
+
+			
+		</div>	
+		<div class="search-wrap">			<!--	搜索框	-->
+		<div class="search-left">
+			<img src="img2/taobao.png" alt="淘宝">
+<!--			<h1>淘宝网Taobao.com</h1>-->
+		</div>
+		
+		
+		<div class="search-center">
+			<div class="search-name">
+				<ul>
+					<li class="name1">
+						<a class="search-name1" href="#">宝贝</a>
+						<div class="name11">
+							<a class="search-name11" href="#">宝贝</a>
+						</div>
+					</li>
+					<li class="name2">
+						<a class="search-name2" href="#">天猫</a>
+						<div class="name22">
+							<a class="search-name22" href="#">天猫</a>
+						</div>				
+					</li>
+					<li class="name3">
+						<a class="search-name3" href="#">店铺</a>
+						<div class="name33">
+							<a class="search-name33" href="#">店铺</a>
+						</div>	
+					</li>
+				</ul>
+			
+			</div>
+			
+			<div class="search-box"> 
+				<div class="search-panel">
+					<img class="camer" src="img2/camera.svg" alt="相机">
+					<img class="search" src="img2/search.svg" alt="搜索">
+					<div >
+					<input class="search-text" type="text" placeholder="春季小衫2019新款时尚" autocomplete="on" oninput="changeInput(this.value)" >
+					</div>																			<!--当输入框输入内容时，搜索图片消失-->			
+				</div>																					
+			
+				<div class="search-button">
+					<p>搜索</p>
+				</div>
+				<div class="search-button1">
+				<p>搜索</p>
+				</div>
+				
+			
+			</div>
+			
+			<div class="search-hots">
+				<ul>
+					<li>新款连衣裙</li>
+					<li>四件套</li>
+					<li>潮流T恤</li>
+					<li>时尚女鞋</li>
+					<li>短裤</li>
+					<li>半身裙</li>
+					<li>男士外套</li>
+					<li>墙纸</li>
+					<li>行车记录仪</li>
+					<li>新款男鞋</li>
+					<li>耳机</li>
+					<li>时尚女包</li>
+					<li>沙发</li>
+				</ul>
+			
+			</div>
+			
+		</div>
+		<div class="QRcode">
+		  <img src="img2/QRcode.png" alt="二维码">
+			</div>
+		</div>
+	
+		
+	 <div class="center-wrap"> 
+		 <!-- 中间部分-->
+	 <div class="center-title">  
+		 <!-- 中间展示标题-->
+		<div class="center-title1">
+		<p>主题市场</p>
+		</div>
+		<ul  class="center-title2">
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>天猫</p>
+			</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>聚划算</p></li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>天猫超市</p>
+			</li>	
+		</ul>
+		<ul class="center-title3">
+			<li class="screen">|</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>淘抢购</p>
+			</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>电器城</p>
+			</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>司法拍卖</p>
+			</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>淘宝心选</p>
+			</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>兴农扶贫</p>
+			</li>
+		</ul>
+		<ul class="center-title4">
+			<li class="screen">|</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>飞猪生活</p>
+			</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>智能生活</p>
+			</li>
+			<li>
+				<img class="head1" src="img2/title.png" alt="标题头像"/>
+				<p>苏宁易购</p>
+			</li>
+		</ul>
+	</div>
+		
+					<!-- 左中大边框-->  
+		 <div class="center-leftcenter-wrap">		  		
+				<!--			 左侧菜单栏展开内容-->	
+		 <div class="center-content-left">
+		 <ul class="click-menu1-wrap">
+		 	<li class="click-menu1">
+		 		<a href="#">女装</a>/
+		 		<a href="#">男装</a>/
+		 		<a href="#">内衣</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu1">
+				<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000" >春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/1.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/1.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/1.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/1.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/1.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/1.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu2">
+		 		<a href="#">鞋靴</a>/
+		 		<a href="#">箱包</a>/
+		 		<a href="#">配件</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu2">
+				<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/2.1.jpg" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/2.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/2.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/2.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/2.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/2.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu3">
+		 		<a href="#">童装玩具</a>/
+		 		<a href="#3">孕产</a>/
+		 		<a href="#">用品</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu3">
+				<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/3.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/3.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/3.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/3.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/3.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/3.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu4">
+		 		<a href="#">家电</a>/
+		 		<a href="#">数码</a>/
+		 		<a href="#">手机</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu4">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/4.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/4.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/4.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/4.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/4.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/4.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu5">
+		 		<a href="#">美妆</a>/
+		 		<a href="##">洗护</a>/
+		 		<a href="#">保健品</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu5">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/1.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/1.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/1.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/1.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/1.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/1.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu6">
+		 		<a href="#">珠宝</a>/
+		 		<a href="#">眼睛</a>/
+		 		<a href="#">手表</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu6">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/5.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/5.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/5.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/5.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/5.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/5.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu7">
+		 		<a href="#">运动</a>/
+		 		<a href="#">户外</a>/
+		 		<a href="#">乐器</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu7">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/6.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/6.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/6.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/6.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/6.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/6.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu8">
+		 		<a href="#">游戏</a>/
+		 		<a href="#">动漫</a>/
+		 		<a href="#">影视</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu8">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/7.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/7.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/7.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/7.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/7.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/7.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu9">
+		 		<a href="#">美食</a>/
+		 		<a href="#">生鲜</a>/
+		 		<a href="#">零食</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu9">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/8.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/8.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/8.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/8.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/8.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/8.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu10">
+		 		<a href="#">鲜花</a>/
+		 		<a href="#">宠物</a>/
+		 		<a href="#">农资</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu10">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/9.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/9.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/9.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/9.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/9.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/9.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu11">
+		 		<a href="#">工具</a>/
+		 		<a href="#">装修</a>/
+		 		<a href="#">建材</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu1-1">
+				<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/11.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/11.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/11.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/11.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/11.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/11.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu12">
+		 		<a href="#">家具</a>/
+		 		<a href="#">家饰</a>/
+		 		<a href="#">家纺</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu1-2">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/12.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/12.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/12.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/12.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/12.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/12.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu13">
+		 		<a href="#">汽车</a>/
+		 		<a href="#">二手车</a>/
+		 		<a href="#">用品</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu1-3">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/13.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/13.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/13.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/13.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/13.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/13.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu14">
+		 		<a href="#">办公</a>/
+		 		<a href="#">DIY</a>/
+		 		<a href="#">五金电子</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu1-4">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/14.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/14.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/14.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/14.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/14.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/14.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu15">
+		 		<a href="#">百货</a>/
+		 		<a href="#">餐厨</a>/
+		 		<a href="#">家庭保健</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu1-5">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/15.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/15.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/15.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/15.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/15.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/15.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 	<li class="click-menu16">
+		 		<a href="#">学习</a>/
+		 		<a href="#">卡券</a>/
+		 		<a href="#">本地服务</a>
+				<img src="img2/centerleftmore.svg" alt="展开栏"/>
+				<div class="menu1-6">
+			<div class="menu11">
+				<div class="menu111">
+					<h5>
+						<p>女装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="女装更多"/> <!--style="cursor: pointer;" onclick="search();"-->
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p style="color: #ff5000">春上新</p>
+					<p style="color: #ff5000">连衣裙</p>
+					<p style="color: #ff5000">T恤</p>
+					<p style="color: #ff5000">衬衫</p>
+					<p style="color: #ff5000">裤子</p>
+					<p>牛仔裤</p>
+					<p style="color: #ff5000">西裤</p>
+					<p>短外套</p>
+					<p>时尚套装</p>
+					<p>半身裙</p>
+					<p style="color: #ff5000">毛针织衬</p>
+					<p>风衣</p>
+					<p>休闲裤</p>
+					<p>卫衣绒衫</p>
+					<p>大码女装</p>
+					<p>蕾丝衫/雪纺衫</p>
+					<p>背心吊带</p>
+					<p>毛衣</p>
+					<p>毛呢外套</p>
+					<p>羽绒服</p>
+					<p>皮衣</p>
+					<p>皮草</p>
+					<p>棉衣棉服</p>
+					<p>马夹</p>
+					<p>牛仔外套</p>
+					<p>阔腿裤</p>
+					<p>中老年女装</p>
+					<p>婚纱礼服</p>
+					<p>民族服装</p>
+					<p>打底裤</p>
+					<p>西装裤</p>
+					<p>唐装</p>
+					<p>汉服</p>
+					<p>旗袍</p>
+				</div>
+					
+				<div class="menu111">
+					<h5>
+						<p>男装</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="男装更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>外套</p>
+					<p style="color: #ff5000">羽绒服</p>
+					<p style="color: #ff5000">棉衣</p>
+					<p>品质好物</p>
+					<p>夹克</p>
+					<p>卫衣</p>
+					<p>皮衣</p>
+					<p>衬衫</p>
+					<p style="color: #ff5000">针织衫/毛衣</p>
+					<p>毛呢大衣</p>
+					<p>T恤</p>
+					<p>POLO衫</p>
+					<p style="color: #ff5000">休闲裤</p>
+					<p>牛仔裤</p>
+					<p>风衣</p>
+					<p>西装</p>
+					<p>牛仔外套</p>
+					<p>棒球服</p>
+					<p>运动裤</p>
+					<p>九分裤</p>
+					<p>套装</p>
+					<p>开衫</p>
+					<p>马甲</p>
+					<p>中老年</p>
+					<p>情侣装</p>
+					<p>大码</p>
+					<p>民族风</p>
+					<p>专柜大牌</p>
+					<p>明星网红</p>
+					<p>原创设计</p>
+				</div>
+				
+				<div>
+					<div class="menu111">
+					<h5>
+						<p>内衣</p>
+						
+					</h5>
+					<div>
+					<span>更多</span>
+					<img class="menu111more" src="img2/centerleftmore.svg" alt="内衣更多" style="cursor: pointer;" onclick="search();"/>
+					</div>
+																									 <!-- 鼠标变手，img使用此方法-->
+					<p>法式内衣</p>
+					<p style="color: #ff5000">无钢圈内衣</p>
+					<p>内裤女</p>
+					<p style="color: #ff5000">文胸</p>
+					<p>内裤男</p>
+					<p style="color: #ff5000">长袖睡衣</p>
+					<p>睡裙</p>
+					<p>真丝睡衣</p>
+					<p>丝袜</p>
+					<p>船袜</p>
+					<p style="color: #ff5000">情侣睡衣</p>
+					<p>抹胸</p>
+					<p>背心</p>
+					<p>睡袍</p>
+					<p>男士睡衣</p>
+					<p>塑身衣</p>
+					<p>内衣套装</p>
+					<p>打底裤</p>
+					<p>连衣睡衣</p>
+					<p>聚拢文胸</p>
+					<p style="color: #ff5000">男士袜子</p>
+					<p>棉袜女</p>
+					<p>卡通睡衣</p>
+					<p style="color: #ff5000">无痕内裤</p>
+					<p>少女文胸</p>
+				</div>	
+				</div>	
+			</div>	
+			
+			<div class="menu12">
+				<h3>猜你喜欢</h3>
+				
+				<div>
+					<img src="img2/16.1.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/16.2.png" alt="">
+					<h5>香云纱裙子重磅真</h5>
+				</div>
+				<div>
+					<img src="img2/16.3.png" alt="">
+					<h5>市井蓝染</h5>
+				</div>
+				<div>
+					<img src="img2/16.4.png" alt="">
+					<h5>花蛤与蟹原创青年</h5>
+				</div>
+				<div>
+					<img src="img2/16.5.png" alt="">
+					<h5>美国the mountain</h5>
+				</div>
+				<div>
+					<img src="img2/16.6.png" alt="">
+					<h5>未满 性感睡衣极</h5>
+				</div>
+				
+			</div>	
+		</div>
+		 	</li>
+		 </ul>
+	</div>				<!--	左边框	-->
+			 
+			 
+			 
+			<!--		 中间2大边框（轮播图）-->
+		<div class="center2-wrap">
+			 
+		<div class="pic">
+       	 <div class="content3">
+            <img src="img2/chart1.1.png" alt="" >
+			<img src="img2/chart1.2.png" alt="" >
+			<img src="img2/chart1.3.png" alt="" >
+			<img src="img2/chart1.4.png" alt="" >
+			<img src="img2/chart1.5.png" alt="" >
+			<img src="img2/chart1.1.png" alt="" > 
+        </div>
+		<div class="dot">
+        <ul class="dot-list">
+            <li class="item active" ></li>
+            <li class="item"></li>
+            <li class="item"></li>
+            <li class="item"></li>
+            <li class="item"></li>
+        </ul>
+		</div>
+			
+        <div class="pic-right">&gt;</div>
+        <div class="pic-left">&lt;</div>
+  		</div>
+
+		<div class="pic2-wrap">
+			<div class="pic2">
+			<span>
+			<img src="img2/chart2.1-1.png" alt="">	
+			</span>
+
+			<em>理想生活上天猫</em>
+			<div>
+			<storng>
+				<i class="num">1
+				</i>
+				/6
+			</storng>
+			</div>	
+			</div>
+			
+			
+		<div class="pic3">
+       	 <div class="content33">
+			 <div class="content33-1">
+				 <ul class="content33-list">
+			 		<li><img src="img2/chart2.1.1.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.2.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.3.jpg" alt=""></li>
+			 		<li><img src="img2/chart2.1.4.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.5.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.6.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.7.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.8.jpg" alt=""></li>
+			 		<li><img src="img2/chart2.1.9.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.10.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.11.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.12.png" alt=""></li>
+			 	</ul>
+			 </div>
+            <div class="content33-3">
+			<img src="img2/chart2.10.png" alt="" >
+			<img src="img2/chart2.9.png" alt="" >
+			</div>
+            <div class="content33-2">
+				<img src="img2/chart2.5.png" alt="" >
+				<img src="img2/chart2.6.png" alt="" >
+			 </div>
+            <div class="content33-2">
+				<img src="img2/chart2.3.png" alt="" >
+				<img src="img2/chart2.4.png" alt="" >
+			 </div>
+            <div class="content33-2">
+				<img src="img2/chart2.1.png" alt="" >
+				<img src="img2/chart2.2.png" alt="" >
+			 </div>
+            <div class="content33-2">
+				<img src="img2/chart2.7.png" alt="" >
+				<img src="img2/chart2.8.png" alt="" >
+			 </div>
+            <div class="content33-1">
+				 <ul class="content33-list">
+			 		<li><img src="img2/chart2.1.1.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.2.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.3.jpg" alt=""></li>
+			 		<li><img src="img2/chart2.1.4.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.5.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.6.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.7.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.8.jpg" alt=""></li>
+			 		<li><img src="img2/chart2.1.9.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.10.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.11.png" alt=""></li>
+			 		<li><img src="img2/chart2.1.12.png" alt=""></li>
+			 	</ul>
+			 </div>
+						 
+        </div>
+			
+		<div class="dot3">
+        <ul class="dot3-list">
+            <li class="item3 active3" ></li>
+            <li class="item3"></li>
+            <li class="item3"></li>
+            <li class="item3"></li>
+            <li class="item3"></li>
+			<li class="item3"></li>
+        </ul>
+		</div>
+			
+        <div class="pic3-right">&gt;</div>
+        <div class="pic3-left">&lt;</div>
+  		</div>
+			
+		</div>
+		
+			 
+			 
+			 
+		</div> 
+		
+			 
+<!--			 轮播图右边-->
+		<div class="center-content-left2">
+			<div><img src="img2/chart3.1.webp.jpg" alt=""></div>
+			<div>
+				<h5>今日热卖</h5>
+			<img src="img2/chart3.2.jpg" alt="">
+			</div>  
+		</div>
+			
+<!--		轮播图下面-->
+		<div class="center-content-below">
+			 <div class="below1">
+				<img src="img2/chart4.1.png" alt="">
+				<p>让你的生活更有趣</p>
+			</div>
+			<div class="below2-wrap">
+				<div  class="below2">
+				<div class="below2-1">
+					<img src="img2/chart4.2.webp.jpg" alt="">
+					<h4>微漫酱访谈第三期：超萌舞见弥音音！</h4>
+					<p>哈喽，大家好，我是你们可爱的微漫酱，今天我们请到了一位舞见小姐姐来做客我们的访谈事，她就是弥音音！</p>
+				</div>
+				<div class="below2-1">
+					<img src="img2/chart4.3.webp.jpg" alt="">
+					<h4>万圣节去哪玩？良阅二次元游园会等你来！！</h4>
+					<p>哈喽，大家好，我是你们的微漫酱！万圣节快要到了，在此推荐给大家一个好玩的二次元线下活动，一起来了解一下把！</p>
+				</div>
+				<div class="below2-1">
+					<img src="img2/chart4.4.webp.jpg" alt="">
+					<h4>大模王带你细数有趣的万圣节cos！</h4>
+					<p>万圣节又叫诸圣节，在每年的11月1日，是西方的传统节日。</p>
+				</div>
+
+				</div>
+				
+				<!--			更多-->
+				<div class="below-more">
+					<img src="img2/centerleftmore.svg" alt="">
+					<p>更多</p>
+				</div>
+				
+			</div>
+
+		</div>	 
+		
+	</div>	
+		 
+		 <!-- 右中大边框-->  	
+	<div class="center-rightcenter-wrap">
+		<div class="rightcenter-wrap">
+			<img class="hi" src="img2/y1.1.jpg" alt="">
+			<p class="headtext">Hi!你好</p>
+			<div class="right2-wrap">
+			<div class="headtext2">
+				<img src="img2/y1.2.png" alt="">
+				<p>领淘金币抵钱</p>
+			</div>
+			<div class="headtext2">
+				<img src="img2/y1.3.png" alt="">
+				<p>会员俱乐部</p>
+			</div>
+			</div>
+			<div class="register">
+			<p>登录</p>
+			<p>注册</p>
+			<p>开店</p>
+			</div>
+		</div>
+		<div class="rightcenter2-wrap"> 
+			<p>网上有害信息举报专区</p>
+			<img src="img2/y2.1.png" alt="">
+		</div>
+		<div class="rightcenter3-wrap">
+			<ul class="right-title">
+				<li><p class="notice1">公告</p></li>
+				<li><p class="rule1">规则</p></li>
+				<li><p class="forum1">论坛</p></li>
+				<li><p class="security1">安全</p></li>
+				<li><p class="public-welfare1">公益</p></li>
+			</ul>
+			<div class="right-title-content">
+			<div class="notice">
+			<ul >
+				<li class="right-title-contentred"><p>天猫成全球最大新品首发平台</p></li>
+				<li><p>聚划算手淘入口再加强</p></li>
+				<li><p>淘宝公布甜咸分界线</p></li>
+			</ul>
+			</div>
+			<div class="rule">
+			<ul>
+				<li><p>新增《淘宝网抽检标准（商用厨房电器）》公示通知</p></li>
+				<li><p>《淘宝禁售商品管理规范》关于证券咨询类商品规则解读变更公示通知</p></li>
+				<li><p>新增《淘宝网大家电行业管理规范》公示通知</p></li>
+				<li><p>《淘宝直播平台管理规则》变更公示通知</p></li>
+			</ul>
+			</div>
+			<div class="forum">
+			<ul>
+				<li><p>淘宝1212活动招商</p></li>
+				<li><p>中差评功能升s级</p></li>
+				<li><p>陌生人拼团上线</p></li>
+				<li><p>运营神器年中大促</p></li>
+			</ul>
+			</div>
+			<div class="security">
+			<ul>
+				<li class="right-title-contentred"><p>魔豆妈妈公益项目</p></li>
+				<li class="right-title-contentred"><p>让母爱永不打烊！</p></li>
+				<li><p>卖家注意：风险通报！</p></li>
+				<li><p>售假获刑又起诉！</p></li>
+			</ul>
+			</div>
+			<div class="public-welfare">
+			<ul>
+				<li class="right-title-contentred"><p>淘宝公益平台正式更名</p></li>
+				<li class="right-title-contentred"><p>益起来商家招募即将截止</p></li>
+				<li><p>卖家如何设置公益宝贝</p></li>
+				<li><p>公益机构开店全攻略</p></li>
+			</ul>
+			</div>
+			</div>
+			
+		</div>
+		<div class="rightcenter4-wrap">
+			<div class="p-wrap">
+				<ul class="rencai">
+					<li class="list1 list1-1-1 rencai1">
+						<div class="list11">
+						<img src="img2/Mobile-phone.svg" alt="">
+						<p>充话费</p>
+						</div>
+					</li>
+					<li class="list1 rencai1">
+						<div class="list12">
+						<img src="img2/pig.svg" alt="">
+						<p>旅行</p>
+						</div>
+					</li>
+					<li class="list2 rencai1"><div class="list12">
+						<img src="img2/Automobile-insurance.svg" alt="">
+						<p>车险</p>
+						</div></li>
+					<li class="list1"><div class="list11">
+						<img src="img2/game.svg" alt="">
+						<p>游戏</p>
+						</div></li>
+					<li class="list1"><div class="list11">
+						<img src="img2/lottery.svg" alt="">
+						<p>彩票</p>
+						</div></li>
+					<li class="list2"><div class="list12">
+						<img src="img2/Film.svg" alt="">
+						<p>电影</p>
+						</div></li>
+					<li class="list2"><div class="list12">
+						<img src="img2/Hotel.svg" alt="">
+						<p>酒店</p>
+						</div></li>
+					<li class="list1"><div class="list11">
+						<img src="img2/Conduct-financial-transactions.svg" alt="">
+						<p>理财</p>
+						</div></li>
+					<li class="list1"><div class="list11">
+						<img src="img2/Looking-for-services.svg" alt="">
+						<p>找服务</p>
+						</div></li>
+					<li class="list2"><div class="list12">
+						<img src="img2/show.svg" alt="">
+						<p>演出</p>
+						</div></li>
+					<li class="list2"><div class="list12">
+						<img src="img2/Hydropower-coal.svg" alt="">
+						<p>水电煤</p>
+						</div></li>
+					<li class="list1"><div class="list11">
+						<img src="img2/Train-tickets.svg" alt="">
+						<p>火车票</p>
+						</div></li>
+				</ul>
+					<div class="list1-1">
+						<div class="line"></div>
+						
+						
+						<div class="list1-11">
+							<div class="a1">
+								<p>充话费</p>
+								<p>充流量</p>
+								<p>充固话</p>
+								<p>充宽带</p>
+							</div>
+							<div class="b1">
+								<img class="close"  src="img2/close.svg" alt="关闭" />
+								<input class="b11" type="text" placeholder="请输入手机号码"/>
+								<img class="phoneList" src="img2/phone list.svg" alt="点击前通讯录" title="点击查看充值历史"/>
+								<img class="phoneMore"  src="img2/phone more.svg" alt="点击前更多" />
+								<div class="Price">
+									<input class="b12" readonly="readonly"  type="text" value="50元">
+									<table class="number">
+										<tr>
+											<td name="1"><span>100</span>元</td>
+											<td name="2"><span>10</span>元</td>
+										</tr>
+										<tr>
+											<td name="3"><span>200</span>元</td>
+											<td name="4"><span>20</span>元</td>
+										</tr>
+										<tr>
+											<td name="5"><span>300</span>元</td>
+											<td name="6"><span>30</span>元</td>
+										</tr>
+										<tr>
+											<td name="7"><span>500</span>元</td>
+											<td name="8" style="background: #ffece5 ;color: #f40;"><span >50</span>元</td>
+										</tr>
+										<tr>
+											<td name="9"><span>1000</span>元</td>
+											<td name="10"></td>
+										</tr>
+									</table>
+								</div>
+
+								<div class="c1">
+									<span>售价</span>
+									<span>¥</span>
+									<strong>49-49.8</strong>
+								</div>
+
+								<div class="d1">
+								<p>立即充值</p>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+			</div>
+	
+		</div>
+
+<!--  		阿里app		-->
+		<div class="ali_icon">
+			<h3>阿里APP
+			</h3>
+			<ul>
+				<li>
+					
+					<img src="img2/taobao_icon.webp" alt="">
+					<div class="taobao_QRcode" ><img src="img2/taobao_QRcode2.png" alt="淘宝二维码">
+					</div>
+
+				</li>
+				<li><img src="img2/tianmao_icon.webp" alt=""></li>
+				<li><img src="img2/juhuasuan_icon.webp" alt=""></li>
+				<li><img src="img2/zhifubao_icon.webp" alt=""></li>
+				<li><img src="img2/wangwang_icon.webp" alt=""></li>
+				<li><img src="img2/dingding_icon.webp" alt=""></li>
+				<li><img src="img2/taopiaopiao_icon.webp" alt=""></li>
+				<li><img src="img2/feizhu_icon.webp" alt=""></li>
+				<li><img src="img2/qiandun_icon.webp" alt=""></li>
+				<li><img src="img2/gaode_icon.webp" alt="高德"></li>
+			</ul>
+			<div class="ali_more">
+				<p>更多</p>
+				<img src="img2/centerleftmore.svg" alt="">
+			</div>
+			
+			
+		</div> 
+		
+	</div>	 
+		 
+	</div>				
+		 
+<!--		淘宝第二版面   -->
+		<div class="second_pages">
+			<div class="second_pages1">
+				<div>
+					<img class="youhaohuo" src="img2/youhaohuo_icon.png" alt="有好货">
+					<img class="youhaohuo_QRcode" src="img2/youhaohuo_QRcode.svg" alt="">
+					<p>与品质生活不期而遇</p>
+					<div><p>换一换</p></div>
+				</div>
+				
+				<ul class="youhaohuo_1">
+					<li>
+						<div class="yhh_11"><img src="img2/yhh1.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>max破产都要买的口红</h4>
+							<p>《破产姐妹》max最爱Tarte哑光口红笔</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>5946 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/yhh2.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>Nike Air Mag回到未来</h4>
+							<p>还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>48458 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/yhh3.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>天王表 天猫联名款石英男表</h4>
+							<p>金色猫眼时间刻度搭配纤长双针简约复古。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>9 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/yhh4.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>Gogan 冰种玉镯</h4>
+							<p>极品冰种质地，视觉效果通透莹润。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>193 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/yhh5.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>走红的解压神器-切割史莱姆</h4>
+							<p>将刀用火加热到上百摄氏度，一刀切到水宝宝上，清脆的声音会让你的疲劳一下子消失。小孩子慎玩。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>393 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/yhh6.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>碎脂机，超快瘦身</h4>
+							<p>这个精美的碎脂机，不仅采用独特的外形的设计，结合上小巧的尺寸，让其方便你外出时随身携带哦。功能非常的强劲，短时间内就可以感受到脂肪在燃烧哦。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>121 人说好</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="second_pages2">
+				<div>
+					<img class="aiguangjie" src="img2/aiguangjie_icon.png" alt="有好货">
+					<p>
+						献给聪明可爱的你
+					</p>
+					<div><p>更多</p></div>
+				</div>
+				
+				<ul class="youhaohuo_1">
+					<li>
+						<div class="yhh_11"><img src="img2/agj1.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>max破产都要买的口红</h4>
+							<p>《破产姐妹》max最爱Tarte哑光口红笔</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>5946 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/agj2.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>Nike Air Mag回到未来</h4>
+							<p>还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>48458 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/agj3.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>天王表 天猫联名款石英男表</h4>
+							<p>金色猫眼时间刻度搭配纤长双针简约复古。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>9 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/agj4.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>Gogan 冰种玉镯</h4>
+							<p>极品冰种质地，视觉效果通透莹润。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>193 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/agj5.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>走红的解压神器-切割史莱姆</h4>
+							<p>将刀用火加热到上百摄氏度，一刀切到水宝宝上，清脆的声音会让你的疲劳一下子消失。小孩子慎玩。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>393 人说好</p>
+						</div>
+					</li>
+					<li>
+						<div class="yhh_11"><img src="img2/agj6.webp.jpg" alt=""></div>
+						<div class="yhh_12">
+							<h4>碎脂机，超快瘦身</h4>
+							<p>这个精美的碎脂机，不仅采用独特的外形的设计，结合上小巧的尺寸，让其方便你外出时随身携带哦。功能非常的强劲，短时间内就可以感受到脂肪在燃烧哦。</p>
+						</div>
+						<div class="yhh_13">
+							<img src="img2/yhh_wx.png" alt="">
+							<p>121 人说好</p>
+						</div>
+					</li>
+				</ul>
+			
+			</div>
+			<div class="second_pages3"></div>
+		</div>
+		
+		
+		
+	</div>				<!--	最大的边框	-->
+
+</body>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script>
+		function changeInput(val){							
+			
+			if(val){
+				$(".search").hide()
+			}else{
+				$(".search").show()
+			}
+	
+		}
+		
+		
+		
+		$(document).ready(function(){
+			$(".name1").click(function(){					//  搜索框名称 点击名称隐藏、显示	
+			if($(this).hasClass("xutao")){					//  判断是否有这个类名	
+				$(".search-name2").show();					//  显示
+				$(".name22").hide();						// 	隐藏
+				$(".name2").removeClass("xutao")			//  清除类名
+				
+				$(".search-name3").show();
+				$(".name33").hide();
+				$(".name3").removeClass("xutao")
+			}else{
+				$(".search-name1").hide();				 	
+				$(".name11").show();
+				$(this).addClass("xutao")			     		//  添加类	
+				
+				$(".search-name2").show();
+				$(".name22").hide();
+				$(".name2").removeClass("xutao")
+				
+				$(".search-name3").show();
+				$(".name33").hide();
+				$(".name3").removeClass("xutao")
+				
+				$(".camer").show();
+				$(".search-button1").hide();
+				$(".search-button").show();
+				
+				$(".search-text").attr("placeholder","春季小衫2019新款时尚")
+							//	改属性
+	
+			}	
+				$(".search-hots").show();
+		})
+		
+		
+		
+		/*当点击1时，转变，再次点击一时，转变。*/
+		
+		/*$(".name2").click(function(){
+			if($(this).hasClass("xutao")){
+				$(".search-name2").show();
+				$(".name22").hide();
+				$(this).removeClass("xutao")
+			}else{
+				$(".search-name2").hide();				 	//  >a代表着
+				$(".name22").show();
+			$(this).addClass("xutao")			   		    //  添加类						
+			}	
+		})*/
+		
+				$(".name2").click(function(){						//  点击名称隐藏、显示	
+					
+			if($(this).hasClass("xutao")){
+				$(".search-name1").show();
+				$(".name11").hide();
+				$(".name1").removeClass("xutao")
+				
+				$(".search-name3").show();
+				$(".name33").hide();
+				$(".name3").removeClass("xutao")
+			}else{
+				$(".search-text").attr("placeholder","")
+				
+				$(".search-name2").hide();				 	
+				$(".name22").show();
+				$(this).addClass("xutao")			     		//  添加类	
+				
+				$(".search-name1").show();
+				$(".name11").hide();
+				$(".name1").removeClass("xutao")
+				
+				$(".search-name3").show();
+				$(".name33").hide();
+				$(".name3").removeClass("xutao")
+				
+				$(".camer").hide();
+				$(".search-button").hide();
+				$(".search-button1").show();
+				
+			}	
+			$(".search-hots").hide();
+		})
+		
+		
+			$(".name3").click(function(){						//  点击名称隐藏、显示	
+			if($(this).hasClass("xutao")){
+				$(".search-name2").show();
+				$(".name22").hide();
+				$(".name2").removeClass("xutao")
+				
+				$(".search-name1").show();
+				$(".name11").hide();
+				$(".name1").removeClass("xutao")
+			}else{
+				$(".search-text").attr("placeholder","");
+				
+				$(".search-name3").hide();				 	
+				$(".name33").show();
+				$(this).addClass("xutao")			     		//  添加类	
+				
+				$(".search-name2").show();
+				$(".name22").hide();
+				$(".name2").removeClass("xutao")
+				
+				$(".search-name1").show();
+				$(".name11").hide();
+				$(".name1").removeClass("xutao")
+				
+				$(".camer").hide();
+				$(".search-button1").hide();
+				$(".search-button").show();
+			}	
+				$(".search-hots").hide();
+		})
+		})
+		
+		
+			//		轮播图----方法一（缺点：不能实现快速切换图片时，立即执行当前指令）
+		      
+//            每个固定的时间移动图片
+//			setInterval:1000为换图时间
+//				setInterval()方法可按照指定的周期来调用函数或者计算表达式（以毫秒为单位）
+		
+		
+		
+//		
+//		 	$(function(){	  
+//            var timer = setInterval(picLoop,1000);
+//            var index = 0;
+//            function picLoop(){
+//                index++;
+//                if (index==5) {index=0;
+//				$(".content3").animate({left:-520*index},300);
+//                $(".index li").eq(index).css("background-color","#ff5000")
+//					   .siblings().css("background-color","rgba(255,255,255,1)");	
+//							  
+//				}else{
+//				//animate:300为动图移动时间
+//                $(".content3").animate({left:-520*index},300);
+//                $(".index li").eq(index).css("background-color","#ff5000")
+//					   .siblings().css("background-color","rgba(255,255,255,1)");
+//			
+//				}
+//
+//				//eq选择括号里第几个li
+//				//	siblings寻找元素的同胞元素
+//            }
+//
+//            //定时器的控制
+//            $(".pic").hover(function(){
+//                clearInterval(timer);
+//                $(".pic-left").show();
+//                $(".pic-right").show();
+//            },function(){
+//                timer = setInterval(picLoop,1000);
+//                $(".pic-left").hide();
+//                $(".pic-right").hide();
+//            })
+//			
+//			//		mouseover当鼠标指针位于元素上方时，改变元素的背景色
+//            $(".index li").click(function(){
+//                $(this).css("background-color","#ff5000")
+//                       .siblings().css("background-color","rgba(255,255,255,1)");
+//                index = $(this).index();
+		
+//                $(".content3").animate({"left":-520*index},300);
+//
+//            })
+//			//			$(this).index():点击列表项可获得其相对于同胞元素的 index 位置(0、1、....7)	
+//
+//            $(".pic-left").click(function(){
+//                index--;
+//                if (index==-1) {index=4;}
+//                $(".content3").animate({"left":-520*index},300);
+//                $(".index li").eq(index).css("background-color","#ff5000")
+//                       .siblings().css("background-color","rgba(255,255,255,1)");
+//            })
+//            $(".pic-right").click(function(){
+//                index++;
+//                if (index==5) {index=0}
+//                $(".content3").animate({"left":-520*index},300);
+//                $(".index li").eq(index).css("background-color","#ff5000")
+//                       .siblings().css("background-color","rgba(255,255,255,1)"); 
+//            })
+//			
+//			 $(".pic-left").mousemove(function(){
+//                $(this).css("background-color","rgba(80,80,80,0.5)");
+//			 })
+//				  
+//				  
+//			 $(".pic-right").mousemove(function(){
+//                $(this).css("background-color","rgba(80,80,80,0.5)");
+//
+//			 })	  
+//				  
+//			$(".pic-left").mouseout(function(){
+//                $(this).css("background-color","rgba(100,100,100,0.5)");
+//			 })
+//			
+//			$(".pic-right").mouseout(function(){
+//                $(this).css("background-color","rgba(100,100,100,0.5)");
+//			 })
+//        })
+		
+		
+	// 设置比较索引的最小值0，5
+        var minNum = 0;
+        var maxNum = 5;
+        // 刚开始索引为0
+        var index = 0;
+        // 设置一个计时器为空
+        var counter = null;
+        // 设置最小移动距离520，因为这边每张图片都为宽度520px，高度280px
+        var limWidth = 520;
+
+        // 设置自动轮播函数
+        function autoMove() {
+            // 如果计时器不为空的话那么跳出，计时器不为空，说明当前有计时器在跑，那么你就老老实实的跑当前的计时器，别给搞事
+            if (counter != null) {  //为什么我不能直接写 counter == null{counter= setinterval（autoplay，3000）}
+                return;
+            }
+            // 如果计时器为空的话，那么开启一个每3秒执行一次autoPlay的函数
+            counter = setInterval(autoPlay, 4000);
+        }
+
+        // 自动轮播函数，其实很简单，向函数cliMove传递参数right，就好比，一个人每3秒点击一次右边的小按钮，不过这变有电脑去执行
+        function autoPlay() {
+            cliMove('right');
+        }
+        // 执行函数，传递形参，代表方向
+        function cliMove(direction) {
+            // 因为在这边有涉及到整个ul宽度的变化的动画，stop()函数有两个参数，涉及到jQuery动画，第一个参数意思是，是否还要保留动画队列，false不保留，true保留。第二个参数意思是，是否立即执行完当前的动画，true是，false不是，那这边选择true的原因是我需要你立即响应当前用户的操作，防止用户快速点击左右按钮，移开鼠标，而动画却还在移动。这边第一个参数填false或者true，已经影响不了什么了，因为当前动画立即执行，动画队列肯定是没有了，所有第一个参数填false或者true，已经不打紧了
+            $('.content3').stop( false, true );
+            // 如果用户点击的是右边的按钮
+            if ( direction == "right" ) {
+                // 那么索引值加1，没点击一次在原有基础上加一次
+                index++;
+                // 如果索引值大于5了
+                if ( index > 5) {
+                    // 意味着用户浏览到第六张了，而这边第六张正是第一张，为了实现无缝连接，所以这样处理，看着只有5张，实际上头尾两张是一样的，所以有六张
+                    // 那么将ul的left设置为0，又回到了第一张，注意这边是迅速移动到第一张，因为用了css属性，而不是animate移动动画
+                    $('.content3').css({
+                        left: 0
+                    })
+                    // 同时将索引值设置为1，注意这边的1为第二张，在大多数编程语言中，数组都是从0开始，JS也是一样的
+                    index = 1;
+                }
+            }
+            // 如果传递用户点击的是左边的按钮
+            else if ( direction == "left") {
+                // 那么索引值减1
+                index--;
+                // 如果索引值小于0的话，运用的原理跟上面雷同，意味着迅速移到第六张
+                if ( index < 0 ) {
+                    $('.content3').css({
+                        left: maxNum * -limWidth
+                    })
+                    // 同时索引值变为4，意味着变为第五张
+                    index = 4;
+                }
+            }
+            // 每次index变换时小原点的背景也跟着变换,与图片一一对应,但是图片一共是6张,小原点就5个,所有这边进行判断,如果index大于4的话就返回0即代表着第一个小原点,否则的话图片就随着index变化而变化
+            dotMove($('.item').eq(index > 4 ? 0 : index));
+			
+            // 不关点击的是左边的还是右边的，最后结果都是要执行这句话的，这步是动画移动的关键，
+            // ul的left值设为当前索引与每张图片最小宽度的乘积，这边的负值是意味着，这个ul定位相对于父级left的负值
+            $('.content3').animate({
+                left: index * -limWidth
+            });
+        }
+
+        // 绑定ul父级的鼠标进入，离开事件，jQuery链式调用，如果鼠标进入，那么清空当前自动轮播的计时器，如果鼠标离开，那么重新执行自动轮播的函数
+        $('.pic').mouseenter(function () {
+            clearInterval(counter);
+            counter = null;
+			$(".pic-right").show();
+			$(".pic-left").show();
+        }).mouseleave(function () {
+            autoMove();
+			$(".pic-right").hide();
+			$(".pic-left").hide();
+        })
+
+        //绑定点击事件，如果点击了右边按钮，那么触发函数cliMove，这个函数在上面已经详细注释了，并传入right，图片就会跟你按的次数，进行移动播放
+        
+        $('.pic-left').click(function () {
+            cliMove('left');
+        })
+
+        // 绑定下面小原点事件，如果点击了其中任意一个小原点，那么获取到当前点击的小原点的索引，并且赋值给index，并且执行函数cliMove，不传入参数，因为此时，希望图片与小原点一一对应       
+        $('.item').click(function () {
+            index = $(this).index();
+            cliMove('');
+        })
+
+        // 点击小原点后将会触发cliMove函数，并且在这个函数中，执行了dotMove，移除当前小原点的CSS样式，向dotMove函数传入当前点击的小原点所在的位置，并且设置其CSS样式，即点击的小原点背景变为橘黄色
+        function dotMove(dom) {
+            $('.active').removeClass('active');
+            dom.addClass('active');
+        }
+
+        // 当页面刷新，先执行一边自动轮播的函数，这个时候图片就会自己轮播起来了
+        autoMove();
+	
+	
+
+		
+		
+//		轮播图2
+			
+		// 设置比较索引的最小值0，6
+        var minNum3 = 0;
+        var maxNum3 = 6;
+        // 刚开始索引为0
+        var index3 = 0;
+        // 设置一个计时器为空
+        var counter3 = null;
+        // 设置最小移动距离520，因为这边每张图片都为宽度520px，高度280px
+        var limWidth3 = 520;
+
+        // 设置自动轮播函数
+        function autoMove3() {
+            // 如果计时器不为空的话那么跳出，计时器不为空，说明当前有计时器在跑，那么你就老老实实的跑当前的计时器，别给搞事
+            if (counter3 != null) {  //为什么我不能直接写 counter == null{counter= setinterval（autoplay，3000）}
+                return;
+            }
+            // 如果计时器为空的话，那么开启一个每3秒执行一次autoPlay的函数
+            counter3 = setInterval(autoPlay3, 4000);
+        }
+
+        // 自动轮播函数，其实很简单，向函数cliMove传递参数right，就好比，一个人每3秒点击一次右边的小按钮，不过这变有电脑去执行
+        function autoPlay3() {
+            cliMove3('right');
+        }
+        // 执行函数，传递形参，代表方向
+        function cliMove3(direction3) {
+            // 因为在这边有涉及到整个ul宽度的变化的动画，stop()函数有两个参数，涉及到jQuery动画，第一个参数意思是，是否还要保留动画队列，false不保留，true保留。第二个参数意思是，是否立即执行完当前的动画，true是，false不是，那这边选择true的原因是我需要你立即响应当前用户的操作，防止用户快速点击左右按钮，移开鼠标，而动画却还在移动。这边第一个参数填false或者true，已经影响不了什么了，因为当前动画立即执行，动画队列肯定是没有了，所有第一个参数填false或者true，已经不打紧了
+            $('.content33').stop( false, true );
+            // 如果用户点击的是右边的按钮
+            if ( direction3 == "right" ) {
+                // 那么索引值加1，没点击一次在原有基础上加一次
+                index3++;
+                // 如果索引值大于5了
+                if ( index3 > 6) {
+                    // 意味着用户浏览到第六张了，而这边第六张正是第一张，为了实现无缝连接，所以这样处理，看着只有5张，实际上头尾两张是一样的，所以有六张
+                    // 那么将ul的left设置为0，又回到了第一张，注意这边是迅速移动到第一张，因为用了css属性，而不是animate移动动画
+                    $('.content33').css({
+                        left: 0
+                    })
+                    // 同时将索引值设置为1，注意这边的1为第二张，在大多数编程语言中，数组都是从0开始，JS也是一样的
+                    index3 = 1;
+                }
+            }
+            // 如果传递用户点击的是左边的按钮
+            else if ( direction3 == "left") {
+                // 那么索引值减1
+                index3--;
+                // 如果索引值小于0的话，运用的原理跟上面雷同，意味着迅速移到第六张
+                if ( index3 < 0 ) {
+                    $('.content33').css({
+                        left: maxNum3 * -limWidth3
+                    })
+                    // 同时索引值变为4，意味着变为第五张
+                    index3 = 5;
+                }
+            }
+            // 每次index变换时小原点的背景也跟着变换,与图片一一对应,但是图片一共是6张,小原点就5个,所有这边进行判断,如果index大于4的话就返回0即代表着第一个小原点,否则的话图片就随着index变化而变化
+            dotMove3($('.item3').eq(index3 > 5 ? 0 : index3));
+			
+            // 不关点击的是左边的还是右边的，最后结果都是要执行这句话的，这步是动画移动的关键，
+            // ul的left值设为当前索引与每张图片最小宽度的乘积，这边的负值是意味着，这个ul定位相对于父级left的负值
+            $('.content33').animate({
+                left: index3 * -limWidth3
+            });
+        }
+
+        // 绑定ul父级的鼠标进入，离开事件，jQuery链式调用，如果鼠标进入，那么清空当前自动轮播的计时器，如果鼠标离开，那么重新执行自动轮播的函数
+        $('.pic3').mouseenter(function () {
+            clearInterval(counter3);
+            counter3 = null;
+			$(".pic3-right").show();
+			$(".pic3-left").show();
+        }).mouseleave(function () {
+            autoMove3();
+			$(".pic3-right").hide();
+			$(".pic3-left").hide();
+        })
+
+        //绑定点击事件，如果点击了右边按钮，那么触发函数cliMove，这个函数在上面已经详细注释了，并传入right，图片就会跟你按的次数，进行移动播放
+        $('.pic3-right').click(function () {
+            cliMove3('right');
+        }) 
+        $('.pic3-left').click(function () {
+            cliMove3('left');
+        })
+
+        // 绑定下面小原点事件，如果点击了其中任意一个小原点，那么获取到当前点击的小原点的索引，并且赋值给index，并且执行函数cliMove，不传入参数，因为此时，希望图片与小原点一一对应       
+        $('.item3').click(function () {
+            index3 = $(this).index();
+            cliMove3('');
+        })
+
+        // 点击小原点后将会触发cliMove函数，并且在这个函数中，执行了dotMove，移除当前小原点的CSS样式，向dotMove函数传入当前点击的小原点所在的位置，并且设置其CSS样式，即点击的小原点背景变为橘黄色
+        function dotMove3(dom3) {
+			var index31 = index3 + 1 ;
+			 if ( index31 > 6 ) {
+                   index31 = 1;
+                    // 同时索引值变为4，意味着变为第五张    
+                }
+			$(".num").text(index31);       //		            数量跟着显示
+			
+            $('.active3').removeClass('active3');
+            dom3.addClass('active3');
+        }
+
+        // 当页面刷新，先执行一边自动轮播的函数，这个时候图片就会自己轮播起来了
+        autoMove3();
+		
+		
+		
+		
+		//		轮播图3
+			
+		// 设置比较索引的最小值0，3
+        var minNum4 = 0;
+        var maxNum4 = 2;
+        // 刚开始索引为0
+        var index4 = 0;
+        // 设置一个计时器为空
+        var counter4 = null;
+        // 设置最小移动距离520，因为这边每张图片都为宽度676x，高度73px
+        var limWidth4 = 73;
+
+        // 设置自动轮播函数
+        function autoMove4() {
+            // 如果计时器不为空的话那么跳出，计时器不为空，说明当前有计时器在跑，那么你就老老实实的跑当前的计时器，别给搞事
+            if (counter4 != null) {  //为什么我不能直接写 counter == null{counter= setinterval（autoplay，3000）}
+                return;
+            }
+            // 如果计时器为空的话，那么开启一个每3秒执行一次autoPlay的函数
+            counter4 = setInterval(autoPlay4, 4000);
+        }
+
+        // 自动轮播函数，其实很简单，向函数cliMove传递参数right，就好比，一个人每3秒点击一次右边的小按钮，不过这变有电脑去执行
+        function autoPlay4() {
+            cliMove4('lower');
+        }
+        // 执行函数，传递形参，代表方向
+        function cliMove4(direction4) {
+            // 因为在这边有涉及到整个ul宽度的变化的动画，stop()函数有两个参数，涉及到jQuery动画，第一个参数意思是，是否还要保留动画队列，false不保留，true保留。第二个参数意思是，是否立即执行完当前的动画，true是，false不是，那这边选择true的原因是我需要你立即响应当前用户的操作，防止用户快速点击左右按钮，移开鼠标，而动画却还在移动。这边第一个参数填false或者true，已经影响不了什么了，因为当前动画立即执行，动画队列肯定是没有了，所有第一个参数填false或者true，已经不打紧了
+            $('.below2').stop( false, true );
+            // 如果用户点击的是右边的按钮
+            if ( direction4 == "lower" ) {
+                // 那么索引值加1，每点击一次在原有基础上加一次
+                index4++;
+                // 如果索引值大于5了
+                if ( index4 > 2) {
+                    // 意味着用户浏览到第3张了，而这边第3张正是第一张，为了实现无缝连接，所以这样处理，看着只有5张，实际上头尾两张是一样的，所以有六张
+                    // 那么将ul的left设置为0，又回到了第一张，注意这边是迅速移动到第一张，因为用了css属性，而不是animate移动动画
+ 
+                    // 同时将索引值设置为1，注意这边的1为第二张，在大多数编程语言中，数组都是从0开始，JS也是一样的
+                    index4 = 0;
+                }
+            }
+            // 如果传递用户点击的是左边的按钮
+            else if ( direction4 == "upper") {
+                // 那么索引值减1
+                index4--;
+                // 如果索引值小于0的话，运用的原理跟上面雷同，意味着迅速移到第六张
+                if ( index4 < 0 ) {
+                    $('.below2').css({
+                        top: maxNum4 * -limWidth4
+                    })
+                    // 同时索引值变为4，意味着变为第五张
+                    index4 = 2;
+                }
+            }
+            
+			
+            // 不关点击的是左边的还是右边的，最后结果都是要执行这句话的，这步是动画移动的关键，
+            // ul的left值设为当前索引与每张图片最小宽度的乘积，这边的负值是意味着，这个ul定位相对于父级left的负值
+            $('.below2').animate({
+                top: index4 * -limWidth4
+            });
+        }
+
+		// 绑定ul父级的鼠标进入，离开事件，jQuery链式调用，如果鼠标进入，那么清空当前自动轮播的计时器，如果鼠标离开，那么重新执行自动轮播的函数
+        $('.below2-1').mouseenter(function () {
+            clearInterval(counter4);
+            counter4 = null;
+        }).mouseleave(function () {
+            autoMove4();
+        })
+	
+        // 当页面刷新，先执行一边自动轮播的函数，这个时候图片就会自己轮播起来了
+        autoMove4();
+		
+		
+		
+		
+//		公告、规则、论坛、安全、公益标题内容
+		
+//		$(document).ready(function(){
+//			$(".notice1").css("font-weight","700");
+//  			$(".notice1").hover(function(){
+//			$(".notice").show();
+//			$(".rule").hide();
+//			$(".forum").show();
+//			$(".security").show();
+//			$(".public-welfare").show();
+//				},function(){
+//			
+//  		});
+//		});
+		
+//		  鼠标放在公告上效果
+		$('.notice1').mouseenter(function () {
+            $(".notice1").css("font-weight","700")
+						.css("color","#ff5000");
+			$(".notice").show();
+			$(".rule").hide();
+			$(".forum").hide();
+			$(".security").hide();
+			$(".public-welfare").hide();
+			$(".rule1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".forum1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".security1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".public-welfare1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".notice1").css("border-bottom","#ff5000 solid 2px");
+        }).mouseleave(function () {
+           $(".notice1").css("color","#3C3C3C");
+		   
+						 
+        })
+		
+//		鼠标放在规则上效果
+			$('.rule1').mouseenter(function () {
+            $(".rule1").css("font-weight","700")
+						.css("color","#ff5000");
+			$(".notice").hide();
+			$(".rule").show();
+			$(".forum").hide();
+			$(".security").hide();
+			$(".public-welfare").hide();
+			$(".notice1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".forum1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".security1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".public-welfare1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			
+			$(".rule1").css("border-bottom","#ff5000 solid 2px");	
+        }).mouseleave(function () {
+           $(".rule1").css("color","#3C3C3C");
+			
+						 
+        })
+		
+		
+	//		鼠标放在论坛上效果
+			$('.forum1').mouseenter(function () {
+            $(".forum1").css("font-weight","700")
+						.css("color","#ff5000");
+			$(".notice").hide();
+			$(".forum").show();
+			$(".rule").hide();
+			$(".security").hide();
+			$(".public-welfare").hide();
+			$(".notice1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".rule1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".security1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".public-welfare1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			
+			$(".forum1").css("border-bottom","#ff5000 solid 2px");	
+        }).mouseleave(function () {
+           $(".forum1").css("color","#3C3C3C");
+						
+						 
+        })
+		
+		//		鼠标放在安全上效果
+			$('.security1').mouseenter(function () {
+            $(".security1").css("font-weight","700")
+						.css("color","#ff5000");
+			$(".notice").hide();
+			$(".security").show();
+			$(".forum").hide();
+			$(".rule").hide();
+			$(".public-welfare").hide();
+			$(".notice1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".forum1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".rule1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".public-welfare1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".security1").css("border-bottom","#ff5000 solid 2px");
+				
+        }).mouseleave(function () {
+           $(".security1").css("color","#3C3C3C");
+			
+						 
+        })
+		
+		//		鼠标放在公益上效果
+			$('.public-welfare1').mouseenter(function () {
+            $(".public-welfare1").css("font-weight","700")
+						.css("color","#ff5000");
+			$(".notice").hide();
+			$(".public-welfare").show();
+			$(".forum").hide();
+			$(".security").hide();
+			$(".rule").hide();
+			$(".notice1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".forum1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".security1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			$(".rule1").css("font-weight","500")
+						 .css("border-bottom","#3C3C3C solid 0px");
+			
+			$(".public-welfare1").css("border-bottom","#ff5000 solid 2px")	
+        }).mouseleave(function () {
+           $(".public-welfare1").css("color","#3C3C3C");
+			
+						 
+        })
+		
+		//	鼠标放在“充话费”
+		
+		$('.rencai li.rencai1').mouseenter(function () {
+//			jquery中$this中的p
+//			 $(this).find("p").css("color","#f40");   
+			 $(".rencai1").css("border","#fff  1px");
+             $(this).css("border","#f40 solid 1px");
+			 $(".list1-1").show();
+			 $(".line").css("left",72*$(this).index())	;
+			 $(".rencai1 p").css("color","#000");
+			//		鼠标放在充话费上字体颜色变
+			 $(this).find("p").css("color","#f40");
+			
+//重点！先将格式还原，再改变格式
+        })
+			
+			$(this).find("p").css("color","#000");		
+
+
+			
+
+			$(".b12").click(function(){					
+			if($(".number").hasClass(".number1")){					
+				$(".number").hide();					
+				$(".number").removeClass(".number1")
+							}else{
+				$(".number").show();				 	
+				$(".number").addClass(".number1")		
+//				$(".name22").hide();						// 	隐藏
+//				$(".name2").removeClass("xutao")			//  清除类名
+//				
+//				
+//				$(".search-name3").show();
+//				$(".name33").hide();
+//				$(".name3").removeClass("xutao")
+	     		//  添加类	
+				
+//				$(".search-name2").show();
+//				$(".name22").hide();
+//				$(".name2").removeClass("xutao")
+//				
+//				$(".search-name3").show();
+//				$(".name33").hide();
+//				$(".name3").removeClass("xutao")
+//				
+//				$(".camer").show();
+//				$(".search-button1").hide();
+//				$(".search-button").show();
+//				
+//				$(".search-text").attr("placeholder","春季小衫2019新款时尚")
+							//	改属性
+			}
+			
+		})
+	
+		
+//重点。。。。。	
+//this是指点击的目标
+//bind()向被选元素添加的一个或多个事件处理程序，以及当事件发生时运行的函数。
+//val() 方法返回或设置被选元素的值;元素的值是通过 value 属性设置的。该方法大多用于 input 元素。;如果该方法未设置参数，则返回被选元素的当前值。
+//children() 方法返回返回被选元素的所有直接子元素。
+//attr() 方法设置或返回被选元素的属性值(拥有次class名称的位置)。
+
+
+
+        $(".number td").bind('click',function () {
+        $(".b12").val($(this).children("span").text()+"元") ; //   待查阅
+		$(".number td").css("color","#000")
+					   .css("background","#fff");
+		$(this).css("color","#f40")	;
+		$(this).css("background","#ffece5");
+		
+
+		var index = $(this).attr("name");
+			
+		switch (index){
+				case "1":
+				$(".c1 strong").text("98-99.5");
+				break;
+				case "2":
+				$(".c1 strong").text("9.8-9.9");
+				break;
+				case "3":
+				$(".c1 strong").text("196-199");
+				break;				
+				case "4":
+				$(".c1 strong").text("19.6-20");
+				break;
+				case "5":
+				$(".c1 strong").text("294-299");
+				break;
+				case "6":
+				$(".c1 strong").text("29.4-30");
+				break;
+				case "7":
+				$(".c1 strong").text("490-498");
+				break;
+				case "8":
+				$(".c1 strong").text("49-49.8");
+				break;
+				case "9":
+				$(".c1 strong").text("980-990");
+				break;
+
+				}	
+			 $(".b12").removeClass("sb"); 
+//			
+//		if(index == 1){
+//			$(".c1 strong").text("98-99.5")
+//		}else if(index == 2){
+//			$(".c1 strong").text("9.8-9.9")
+//		}else if(index == 2){
+//			$(".c1 strong").text("196-199")
+//		}else if(index == 2){
+//			$(".c1 strong").text("19.6-20")
+//		}else if(index == 2){
+//			$(".c1 strong").text("294-299")
+//		}else if(index == 2){
+//			$(".c1 strong").text("29.4-30")
+//		}else if(index == 2){
+//			$(".c1 strong").text("490-498")
+//		}else if(index == 2){
+//			$(".c1 strong").text("49-49.8")
+//		}else if(index == 2){
+//			$(".c1 strong").text("980-990")
+//		}else{
+//			$(".c1 strong").text("")
+//		}
+
+        });
+		
+
+//点击充话费时，页面展示，点击其他地方也没了
+		
+
+//		$(document).bind('click', function () {
+//             $(".list1-1").hide();
+//			 $(".p-wrap ul li").css("border","#fff")
+//        });
+//		$(".list1-1").click(function () {
+//			$(".list1-1").show();
+//			$(".p-wrap ul li").show();
+//			
+//
+//		})
+
+		
+		
+		
+		
+		    $(".rencai1").click(function (e) {
+			     e.stopPropagation(e);
+				 $(".list1").show();  
+				 $(".list1-1").show();
+				
+
+        });	
+			$(".list1-1").click(function (e) {
+			     e.stopPropagation(e);
+				 $(".list1").show();  
+				 $(".list1-1").show(); 
+				 $(".number").hide(); 
+				 $(".b12").removeClass("sb"); 
+        });	
+	
+        $(document).bind('click', function () {
+             $(".list1-1").hide();
+			//		鼠标放在充话费上字体颜色变
+			$(".rencai1 p").css("color","#000");
+			 $(".p-wrap ul li").css("border","#fff")
+			 $(".b12").removeClass("sb"); 
+        });
+		
+		
+		
+		
+	
+				
+//		阻止冒泡：点击div以外的地方，div会隐藏
+
+        $(".b12").click(function (event) {
+			
+			if($(this).hasClass("sb")){
+			   	$(".number").hide();  
+				$(this).removeClass("sb") 
+			   }else{
+				 $(".number").show();   	
+			  	 $(this).addClass("sb") 	
+			   }
+			event.stopPropagation();
+        });
+		
+	
+        $(document).bind('click', function () {
+             $(".number").hide();
+			 $(".b12").removeClass("sb"); 
+        });
+		
+		
+//点击关闭按钮，页面关闭
+        $(".close").click(function (e) {
+			e.stopPropagation(e);	
+			$(".list1-1").hide();
+		//		鼠标放在充话费上字体颜色变。
+		$(".rencai1 p").css("color","#000");
+			 $(".b12").removeClass("sb"); 
+			$(".p-wrap ul li").css("border","#fff")
+		 });
+		
+		$(".number td").css("cursor","pointer");
+
+		
+		//		点击有好货，字体颜色和鼠标指针变
+		$(".youhaohuo_1 li").hover(function(){ 
+    	//当鼠标放上去的时候,程序处理
+			$(this).css("cursor","pointer")
+			$(this).find(".yhh_12 h4").css("color","#f40")
+		},
+		function(){
+    	//当鼠标离开的时候,程序处理
+			$(this).find(".yhh_12 h4").css("color","#000")
+		});
+
+		
+		
+	</script>
+
+</html>

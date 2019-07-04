@@ -1,0 +1,1323 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>音乐播放器</title>
+	<style>
+		/*@font-face{
+    	font-family: xutao250;
+    	src: url('ttf.TTF'); 
+		}定义你自己的字体！！！*/
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+			font-size: 16px;
+			font-family:tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		html{
+			width: 100%;
+			height: 100%;
+		}
+		body {
+			width: 100%;
+			height: 100%;
+			line-height:1;
+/*
+			display: flex;
+			justify-content: center;  屏幕居中显示
+			align-items: center;
+*/
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+/*			border-collapse 属性设置表格的边框是否被合并为一个单一的边框，还是象在标准的 HTML 中那样分开显示。*/
+			border-collapse: collapse;
+			border-spacing: 0;
+			width: 100%;
+		}
+
+/*	开始*/
+		.all-wrap{
+/*			固定最小值*/
+			min-width: 1022px;
+			min-height: 670px;
+			width: 1022px;
+			height: 670px;
+			resize:both;
+/*放大缩小*/
+			overflow:auto;
+			box-shadow: -5px -5px 15px #e3e3e3, 5px 5px 15px #e3e3e3;
+/*			四周阴影*/
+			position: absolute;
+			top:70px;
+			left: 100px;
+		}
+		
+		
+		.head-wrap{
+			width: 100%;
+			height: 50px;
+			background: #c62f2f;
+			float:left; 
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			overflow: hidden;
+			z-index: 2;
+		}
+		
+		.left-wrap{
+			height: 100%;
+			width: 205px;
+			background: #fff;
+			float: left;
+			border-right: #e1e1e2 solid 1px;
+			box-sizing: border-box;
+			overflow: auto;
+			padding-top: 50px;
+			padding-bottom: 106px;
+			box-sizing: border-box;
+			position: relative;
+			
+		}
+		
+		.right-wrap{
+/*			百分比减去固定像素*/
+			width: calc(100% - 205px);
+			height: calc(100% - 49px);
+			background: #fff;
+			float: left;
+			padding-top: 80px;
+			box-sizing: border-box;
+			border-bottom: #e1e1e2 solid 1px;
+			overflow: auto;
+		}
+	
+		.bottom-wrap{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			width: 99%;
+			height: 49px;
+			background: #fff;
+			float: left;
+			box-sizing: border-box;
+			vertical-align: middle; 
+
+			
+		}
+		
+		.head1{
+			width: 191px;
+			height: 100%;
+			float: left;
+			
+	
+		}
+		
+		.head1  img{
+			float: left;
+			height: 20px;
+			padding: 15px 8px 15px 15px;
+
+		}
+		
+		.head1 p{
+			color: #FFFFFF;
+			line-height: 50px;
+			font-size: 16px;
+
+			
+		}
+		.head2{
+			float: left;
+			width: 50px;
+			height: 100%;
+			text-align: center;
+			
+		}
+		
+		.head2 img{
+			height: 40%;
+			padding-top: 25%;
+			
+		}
+		
+		.head4{
+			padding-right: 6px;
+			float: right;
+			margin-top: 15px;
+			margin-right: 10px;
+		}
+		
+		
+		.head5{
+			float: right;
+			margin-top: 15px;
+			
+		}
+		
+		.head4 ul li{
+			float: right;
+			padding-left:13px;
+		}
+		
+		.head4 ul li img{
+			height: 12px
+		}
+		
+		.head5 ul li{
+			float: left;
+			padding-left: 18px;
+		}
+		
+		.head5 ul p{
+			float: right;
+			padding-left: 15px;
+			font-weight: 100;
+			color: #a82828;
+		}
+		
+		.head5 ul li img{
+			height: 20px;
+		}	
+		.head3{
+			float: left;
+			margin-left: 15px;
+			margin-top: 15px;
+		}
+		.head3 input{
+			line-height: 20px;
+			border-radius: 25px;
+			color: #FFFFFF;
+			width: 215px;
+			height: 20px;
+			text-indent:7px;
+			border: none;
+			background: url(img3/search.svg) no-repeat 97% center;
+			background-color: #a82828; 
+			outline-width: 0px;
+			background-size: 14px 14px;
+		}
+		.head3 input::-webkit-input-placeholder {
+			color: #c77373;
+			font-size: 12px;
+			
+		}
+		.head6{
+			float: right;
+			width: 130px;
+			height: 50px;
+			padding-top: 12px;
+			box-sizing: border-box;
+		
+		}
+		.head6 img:first-child{
+			float: left;
+			width: 25px;
+			border-radius: 14px
+			
+			
+		}
+		
+		.head6 p{
+			float: left;
+			color: #eec1c1;
+			font-weight: 100;
+			font-size:12px; 
+			line-height: 26px;
+			padding-left: 6px
+		}
+		
+		.head6 p:hover{
+			color: #fff;
+			
+		}
+		
+		
+		
+		.head6 img:last-child{
+			float: left;
+			width: 10px;
+			margin-top: 7px;
+			padding-left: 10px;
+			
+		}
+		
+		.head-wrap img{
+			cursor: pointer;
+		}
+		
+		.head-wrap p{
+			cursor: pointer;
+		}
+		
+		.music-information{
+			position: absolute;
+			top: -58px;
+			left: 0px;
+			border-top: #e1e1e2 solid 1px;
+			border-bottom: #e1e1e2 solid 1px;
+			width: 205px;
+			height: 58px;
+			padding:6px ;
+			box-sizing: border-box;
+			
+		}
+		
+		.music-information>img{
+			float: left;
+			height: 45px;
+			cursor: pointer;
+		}
+		
+		.music-information>div{
+			float: left;
+			
+		}
+		
+		.music-information>div>p{
+			font-size: 12px;
+			margin-left: 1px;
+			padding: 5px;
+			cursor: pointer;
+			box-sizing: border-box;
+			text-overflow: ellipsis;
+			width: 105px;
+			overflow: hidden;
+		}
+		
+		.music-information>div>h4{
+			width: 105px;
+			font-size: 13px;
+			font-weight: 300;
+			margin: 5px;
+			cursor: pointer;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 15px;
+		}
+		
+		.music-information>div:last-child{
+			margin-left: 6px;
+
+			
+			
+		}
+		.music-information>div>img{
+			display: block;
+			margin: 4px;
+			cursor: pointer;
+			
+		}
+		
+		.play{
+			display: none;
+			float: left;
+			margin-top: 10px;
+			margin-left: 50px;
+			
+			
+		}
+		
+		.left-wrap>p{
+			margin-top: 10px;
+			margin-bottom: 15px;
+			margin-left: 10px;
+			font-size: 13px;
+			font-weight: 500;
+			color: #5c5c5c;
+			
+		}
+		.left-wrap>ul>li{
+			display: block;
+			overflow: hidden;
+			padding:6px 20px;
+			cursor: pointer;
+		}
+		
+		.left-wrap>ul>li:hover p{
+			color: #000;
+	
+		}
+		
+		.left-wrap>ul>li>p{
+			float: left;
+			font-size: 12px;
+			color: #5c5c5c;
+			line-height: 20px;
+		}
+		.left-wrap>ul>li>img{
+			float: left;
+			font-size: 12px;
+			color: #5c5c5c;
+			padding-right: 10px;
+			width: 20px;
+		}
+		
+		.bendi{
+			background: #e6e7ea;
+			
+		}
+		
+		.left-wrap>div{
+			height: 32px;
+			width: 4px;
+			background: #c62f2f;
+			position: absolute;
+			top: 88px;
+			left: 0px;
+			
+		}
+		
+		.gedan{
+			background: #fff;
+			border:#e03f40 solid 1px;
+			color:#e03f40;
+			font-size: 12px;
+			float: left;
+			padding: 4px 7px;
+			margin-right: 8px;
+			
+			
+		}
+		.right1-wrap>ul>li{
+			float: left;
+			margin-left: 30px;
+			overflow: hidden;
+		}
+		
+		
+		.woai{
+			font-size: 22px;
+			color: #000;
+			font-family: "微软雅黑"
+	
+		}
+		
+		.diandian{
+			float: left;
+    		width: 28px;
+   			border-radius: 14px;
+		}
+		
+		.jiejiao{
+			float: left;
+			font-size: 14px;
+			font-weight: 300;
+			padding-top: 8px;
+			padding-left: 8px;
+			color: #666666;
+			
+		}
+		
+		.touxiang-wrap{
+			margin-top: 15px;
+			margin-left: 2px;
+			overflow: hidden;
+		}
+		
+		.riqi{
+			float: left;
+			font-size: 10px;
+			color: #888888;
+			margin-top: 9px;
+			margin-left: 14px;
+		}
+		
+		.bofang{
+			overflow: hidden;
+			margin-top: 18px;
+		}
+		
+		.input1{
+			float: left;
+			border: none;
+			background: #c62f2f;
+			color: #fff;
+			height: 27px;
+			cursor: pointer;
+			
+		}
+		
+		.input1:hover{
+			background: #b12323;
+		}
+		
+		
+		.bofang input:first-child{
+			width: 90px;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			padding-left: 16px;
+			font-weight: 300;
+			outline-width: 0px;
+		}
+		
+		.bofang input value{
+			line-height: 27px;
+		}
+		
+		.bofang input:nth-child(2){
+			width: 32px;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			font-size: 24px;
+			font-weight: 100;
+			line-height: 27px;
+			outline-width: 0px;
+		}
+		.input2{
+			width: 83px;
+			height: 27px;
+			float: left;
+			border: #c0c0c0 solid 1px;
+			background: #fff;
+			color: #c0c0c0;
+			height: 27px;
+			margin-left: 10px;
+			padding-left: 20px;
+			border-radius: 5px;
+			font-size: 12px;
+			box-sizing: border-box;
+			outline-width: 0px;
+
+		}
+		
+		.input3{
+			width: 83px;
+			height: 27px;
+			float: left;
+			border: #c0c0c0 solid 1px;
+			background: #fff;
+			color: #000;
+			height: 27px;
+			margin-left: 10px;
+			padding-left: 22px;
+			border-radius: 5px;
+			font-size: 12px;
+			box-sizing: border-box;
+			cursor: pointer;
+			outline-width: 0px;
+		}
+		
+		.gequshu{
+			font-size: 12px;
+			width: 50px;
+			height: 37px;
+			float: left;
+			color: #999999;
+			line-height: 18px;
+			text-align: right;
+			margin-right: 8px;
+			padding-right: 10px;
+			outline-width: 0px;
+		}
+		
+		.fenge{
+			border-left: #c0c0c0 solid 1px;
+			
+		}
+		.gqdw{
+			position: absolute;
+			right: 20px;
+			top: 0px;
+		}
+		
+		.right1-wrap{
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+		}
+		.right2-wrap{
+			overflow: hidden;
+			margin-top: 46px;
+			padding-left: 70px;
+			padding-top: 8px;
+			position: relative;
+/*			border-bottom: #e1e1e2 solid 1px;*/
+		}
+		.right2-wrap>ul>li{
+			float: left;
+			margin-right: 50px;
+			
+		}
+		
+		.right2-wrap>ul>li>p{
+			font-size: 15px;
+			padding: 3px;
+			
+		}
+		
+		.right2-wrap>div>input{
+			width: 170px;
+			height:20px;
+			outline-width: 0px;
+			border: #e1e1e2 solid 1px;
+			text-indent: 15px;
+			border-radius: 15px;
+			position: absolute;
+			right: 45px;
+			top: -0px;
+			background: url(img3/search1.svg) no-repeat 96%;
+			
+			
+				
+		}
+		.right2-wrap>div>input::-webkit-input-placeholder {
+			color: #cccccc;
+			font-size: 12px;
+		}
+		
+		.right3-wrap{
+			width: calc(100% - 10px);
+		}
+		
+		
+		.gedanlie{
+			border-bottom: #c62f2f solid 4px;
+		}
+		
+		table td{
+			height: 28px;
+			font-size: 13px;
+			color: #666666;	
+			vertical-align: middle;
+			padding-left: 10px;
+		}
+		table td span{
+			font-size: 13px;
+			color: #666666;	
+
+
+		}
+		
+		table td img:last-child{
+			padding-left: 4px;
+			width: 15px;
+		}
+		
+		
+		table thead tr{
+			border-bottom: #e1e1e2 solid 1px;
+			border-top: #e1e1e2 solid 1px;
+		}
+		
+		.b1{
+			max-width: 40px;
+			width: 40px;
+			height: 28px;
+			border-right :#e1e1e2 solid 1px;
+			color: #666666;
+			
+		}
+		
+		
+		.b2{
+			max-width: 50px;
+/*			width: 50px;*/
+			height: 28px;
+			border-right :#e1e1e2 solid 1px;
+			color: #666666;
+		}
+		.b3{
+			width: 32%;
+			height: 28px;
+			border-right :#e1e1e2 solid 1px;
+			color: #666666;
+		}
+		.b4{
+			width: 25%;
+			height: 28px;
+			border-right :#e1e1e2 solid 1px;
+		}
+		.b5{
+			width: 20%;
+			height: 28px;
+			border-right :#e1e1e2 solid 1px;
+			
+			
+			
+		}
+		.b6{
+			width: 9%;
+			height: 28px;
+			}
+		table tbody tr td:first-child{
+			padding-left: 30px;
+		}
+		
+		table tbody tr td img{
+			cursor: pointer;
+		}
+		
+		.right2-wrap>ul>li{
+			cursor: pointer;
+		}
+		.right4-wrap{
+			display: none;
+			width: 100%;
+			text-align: center;
+			border-top: #e1e1e2 solid 1px;
+				
+		}
+		.pinglun{
+			width: 100%;
+			position: relative;
+		}
+		
+		.pinglun textarea{
+			max-height: 80px;
+			min-width: 732px;
+			min-height: 60px;
+			width: calc(100% - 80px);
+			height: 60px;
+			border: #elele2 solid 1px;
+			outline: 0px;
+/*			下一行*/
+			word-wrap:break-word ;
+			margin: 30px 40px 10px 40px;
+			box-sizing: border-box;
+			resize: none;
+		}
+		
+		.plimg{
+			float: left;
+			margin-left: 40px;
+			
+		}
+		.plimg img{
+			width: 18px;
+			padding-right: 8px;
+
+		}
+		
+		.pl1{
+			color: #666666;
+			font-size: 14px;
+			margin: 70px auto 0px auto;
+		}
+		
+		
+		.pl{
+			padding: 3px;
+			border: #e1e1e2 solid 1px;
+			position: absolute;
+			top: 100px;
+			right: 38px;
+			font-size: 12px;
+		}
+		
+		tr:hover{
+			background: #ebeced !important;
+		}
+		.nochange:hover{
+			background: #e3e3e5 !important;
+		}
+		
+		#btn-pre{
+			float: left;
+			width: 31px;
+			height: 31px;
+			background: url(img3/pre.svg) no-repeat center;
+			background-color: #e83c3c;
+			border-radius: 50%;
+			margin-right: 25px;
+			margin-top: 2px;
+			cursor: pointer;
+		}
+		#btn-play{
+			width: 35px;
+			height: 35px;
+			background-image: url(img3/play.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-color: #e83c3c;
+			border-radius: 50%;
+			float: left;
+			cursor: pointer;
+		}
+		
+		#btn-stop{
+			width: 35px;
+			height: 35px;
+			background: url(img3/stop.svg) no-repeat center;
+			background-color: #e83c3c;
+			border-radius: 50%;
+			float: left;
+			display: none;
+			cursor: pointer;
+		}
+		
+		#btn-next{
+			width: 31px;
+			height: 31px;
+			background: url(img3/next.svg) no-repeat center;
+			background-color: #e83c3c;
+			border-radius: 50%;
+			float: left;
+			margin-left: 25px;
+			margin-top: 2px;
+			cursor: pointer;s
+		}
+		.btn{
+			float: left;
+			margin-top: 7px;
+			margin-left: 30px;
+			overflow: hidden;
+		}
+		
+		tbody{
+			position: relative;
+		}
+		
+		.lb{
+			width: 13px;
+		}
+		
+		
+		
+	</style>
+		
+</head>
+
+<body>
+<!--	整体-->
+	<div class="all-wrap">
+		<div class="head-wrap">
+			<div class="head1">
+				<img src="img3/Peach.svg" alt="">
+				<p>淘淘云音乐</p>
+			</div>
+			<div class="head2">
+				<img src="img3/Back-off.svg" alt="">
+				<img src="img3/Forward.svg" alt="">
+			</div>
+			
+			<div class="head3">
+				<input type="text" placeholder="搜索音乐，视频，歌词，电台"  >
+			
+			
+			</div>
+
+			
+			<div class="head4">
+				
+				<ul>
+					<li><img src="img3/close.svg" alt=""></li>
+					<li><img src="img3/enlarge.svg" alt=""></li>
+					<li><img src="img3/minimize.svg" alt=""></li>
+					<li><img src="img3/narrow.svg" alt=""></li>
+				</ul>
+					
+			</div>
+			
+			<div class="head5">	
+				
+				<ul>
+					<p>|</p>
+					<li><img src="img3/skin.svg" alt=""></li>
+					
+					<li><img src="img3/mail.svg" alt=""></li>
+					<li><img src="img3/set-up.svg" alt=""></li>
+				</ul>
+			
+			</div>
+			
+			
+			<div class="head6">
+				<img src="img3/diandian.png" alt="">
+				<p>街角的丶拥抱</p>
+				<img src="img3/open.svg" alt="">
+			</div>
+			
+			
+		</div>
+		<div class="left-wrap">
+			<p>我的音乐</p>
+			<ul>
+				<li class="bendi"><img src="img3/music3.svg" alt=""><p style="color: #000">本地音乐</p></li>
+				<li><img src="img3/dow.svg" alt=""><p>下载管理</p></li>
+				<li><img src="img3/cloud.svg" alt=""><p>我的音乐云盘</p></li>
+				<li><img src="img3/wmusic.svg" alt=""><p>我的电台</p></li>
+				<li><img src="img3/my.svg" alt=""><p>我的收藏</p></li>
+			</ul>
+			<div></div>
+			
+		</div>
+		<div class="right-wrap">
+			<div class="right1-wrap">
+				
+				<ul>
+					<li><img src="img3/datu.png" alt=""></li>
+					<li>
+						<div>
+							<p class="gedan">歌单</p>
+							<span class="woai">我喜欢的音乐</span>
+						</div>
+						<div class="touxiang-wrap">
+							<img class="diandian" src="img3/diandian.png" alt="">
+							<p class="jiejiao">街角的丶拥抱</p>
+							<span class="riqi">2016-12-01创建</span>
+						</div>
+						
+						<div class="bofang">
+							<input class="input1" type="button" value="播放全部">
+							<input class="input1" type="button" value="+">
+							<input class="input2" type="button" value="收藏（0）">
+							<input class="input3" type="button" value="分享(0)">	
+							<input class="input3" type="button" value="下载全部">
+						</div>
+					</li>
+					<div class="gqdw">
+						<div class="gequshu">歌曲数437</div>
+						<div class="gequshu fenge">播放数1363</div>
+					</div>
+						
+				</ul>
+			
+			</div>
+			<div class="right2-wrap">
+				<ul>
+					<li class="gedanlie"><p>歌曲列表</p></li>
+					<li class="onpl"><p>评论(0)</p></li>
+					<li><p>收藏者</p></li>
+				</ul>
+				<div><input id="sousuo" type="text" placeholder="搜索音乐歌单"  ></div>
+			
+			
+			</div>
+			<div class="right3-wrap">
+				<table id="num">
+						<thead>
+							<tr>
+								<td class="b1"></td>
+								<td class="b2">操作</td>
+								<td class="b3">音乐标题</td>
+								<td class="b4">歌手</td>
+								<td class="b5">专辑</td>
+								<td class="b6">时长</td>
+							</tr>
+						</thead>
+						<tbody id="tB">
+							 <form action="">
+							<tr>
+								<td class="b11">
+									<span>01</span>
+								</td>
+								<td class="b22">
+									<img src="img3/love.svg" alt="">
+									<img src="img3/dow.svg" alt="">
+								</td>
+								<td class="b33">探清水河</td>
+								<td class="b44">张云雷</td>
+								<td class="b55">李荣浩</td>
+								<td class="b66">03:52</td>
+							</tr>
+							<tr>
+								<td class="b11">
+									<span>02</span>
+								</td>
+								<td class="b22">
+									<img src="img3/love.svg" alt="">
+									<img src="img3/dow.svg" alt="">
+								</td>
+								<td class="b33">奉献</td>
+								<td class="b44">李荣浩</td>
+								<td class="b55">李荣浩</td>
+								<td class="b66">03:52</td>
+							</tr>
+							<tr >
+								<td class="b11">
+<!--
+										  music = ["探清水河","奉献","暧昧","浣花溪","吴昊","當山みれい","RAM WIRE","LOVE"];
+		  var people = new Array();
+		  pname = ["张云雷","韩寒","薛之谦","杨画画","吴昊","光","歩み","ただ一つの愿いさえ"];
+-->
+									<span>03</span>
+								</td>
+								<td class="b22">
+									<img src="img3/love.svg" alt="">
+									<img src="img3/dow.svg" alt="">
+								</td>
+								<td class="b33">暧昧</td>
+								<td class="b44">薛之谦</td>
+								<td class="b55">李荣浩</td>
+								<td class="b66">03:52</td>
+							</tr>
+							<tr >
+								<td class="b11">
+									<span>04</span>
+								</td>
+								<td class="b22">
+									<img src="img3/love.svg" alt="">
+									<img src="img3/dow.svg" alt="">
+								</td>
+								<td class="b33">浣花溪</td>
+								<td class="b44">杨画画</td>
+								<td class="b55">李荣浩</td>
+								<td class="b66">03:52</td>
+							</tr>
+							<tr>
+								<td class="b11">
+									<span>05</span>
+								</td>
+								<td class="b22">
+									<img src="img3/love.svg" alt="">
+									<img src="img3/dow.svg" alt="">
+								</td>
+								<td class="b33">吴昊成名曲</td>
+								<td class="b44">吴昊</td>
+								<td class="b55">李荣浩</td>
+								<td class="b66">03:52</td>
+							</tr>
+							<tr>
+								<td class="b11">
+									<span>06</span>
+								</td>
+								<td class="b22">
+									<img src="img3/love.svg" alt="">
+									<img src="img3/dow.svg" alt="">
+								</td>
+								<td class="b33">當山みれい</td>
+								<td class="b44">光</td>
+								<td class="b55">李荣浩</td>
+								<td class="b66">03:52</td>
+							</tr>
+							<tr>
+								<td class="b11">
+									<span>07</span>
+								</td>
+								<td class="b22">
+									<img src="img3/love.svg" alt="">
+									<img src="img3/dow.svg" alt="">
+								</td>
+								<td class="b33">RAM WIRE</td>
+								<td class="b44">歩み</td>
+								<td class="b55">李荣浩</td>
+								<td class="b66">03:52</td>
+							</tr>
+							<tr>
+								<td class="b11">
+									<span>08</span>
+								</td>
+								<td class="b22">
+									<img src="img3/love.svg" alt="">
+									<img src="img3/dow.svg" alt="">
+								</td>
+								<td class="b33">LOVE</td>
+								<td class="b44">ただ一つの愿いさえ</td>
+								<td class="b55">李荣浩</td>
+								<td class="b66">03:52</td>
+							</tr>
+							<img class="lb" src="img3/horn.svg" alt="">
+						</form>	
+					</tbody>
+					
+				
+				
+				
+				</table>
+			
+			
+			</div>
+			<div class="right4-wrap">
+				<div class="pinglun">
+					<textarea name="" id="" cols="30" rows="3" maxlength="550"></textarea>
+					<div class="plimg">
+						<img src="img3/Smile.svg" alt="">
+						<img src="img3/hudong.svg" alt="">
+						<img src="img3/shuohua.svg" alt="">
+					</div>
+					<p class="pl1">还没有评论，快来抢沙发~</p>
+					<p class="pl">评论</p>
+				</div>
+			
+			</div>
+		</div>
+		<div class="bottom-wrap">
+			<div class="music-information">
+				<img src="img3/喷水.png" alt="">
+				<div>
+					<p id="name">谈清水河</p>
+					<h4 id="people">张云雷</h4>
+				</div>
+				<div>
+					<img src="img3/love.svg" alt="取消喜欢" title="取消喜欢">
+					<img src="img3/forward2.svg" alt="分享" title="分享">
+				</div>
+				
+			</div>
+			<div class="play">
+<!--
+				<audio controls="controls">
+					<source src="audio/music.mp3"  />
+ 					<source src="audio/fengxian.mp3" />
+					Your browser does not support the audio element.
+				</audio>
+-->
+				<audio id="audio" src="audio/探清水河.mp3" ></audio>
+				
+			</div>
+			<div class="btn">
+				<div id="btn-pre"></div>
+				<div id="btn-play" ></div>
+				<div id="btn-stop"></div>
+				<div id="btn-next"></div>
+
+			</div>
+<!--			获取接口-->
+			<input type="text" id="sbxutao" />
+			<input type="password" id="sbxutao1" />
+			<input type="button" value="submit" id="submit"/>
+			<p id="xutao">这里写后端传给徐涛250的数据</p>	
+		</div>
+			
+	</div>
+		
+</body>
+	
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	
+	
+	
+	<script>
+		//post获取接口
+//		$("#submit").click(function(){
+//			var usn = $("#sbxutao").val(),
+//				pwd = $("#sbxutao1").val();
+//			if(!usn || !pwd){
+//			   alert("请填写账号密码")
+//			   return
+//		   	}
+//
+//			$.ajax({
+//				url:"http://172.21.3.152:7001/login",
+//				method:"POST",
+//				data:{
+//					username:usn,
+//					password:pwd
+//				},
+//
+//				success:function(res){
+//					console.log(res)
+//					$("#xutao").text(res.message)
+//				},
+//				error:function(e){
+//					alert(JSON.stringify(e))
+//				}
+//
+//			})
+//		})
+		
+		//get获取数据
+			$("#submit").click(function(){
+			var usn = $("#sbxutao").val(),
+				pwd = $("#sbxutao1").val();
+			if(!usn || !pwd){
+			   alert("请填写账号密码")
+			   return
+		   	}
+
+			$.ajax({
+				url:"http://172.21.3.152:7001?username="+usn+"&password="+pwd+"",
+				method:"GET",
+				success:function(res){
+					console.log(res)
+					$("#xutao").text(res)
+				},
+				error:function(e){
+					alert(JSON.stringify(e))
+				}
+
+			})
+		})
+		
+		
+		
+		$(".left-wrap ul li").click(function(){
+			$(".left-wrap ul li").css("background","#fff");
+			$(".left-wrap>div").css("top",88+32*$(this).index());
+			$(this).css("background","#e6e7ea");
+			$(".left-wrap ul li p").css("color","#5c5c5c");
+			$(this).find("p").css("color","#000");
+		}) 
+	
+		
+			$(".right2-wrap>ul>li").click(function(){
+			$(".right2-wrap>ul>li").css("border-bottom","#fff solid 1px");
+			$(this).css("border-bottom","#c62f2f solid 4px");
+			$(".right2-wrap>ul>li>p").css("color","#000");
+			$(this).find("p").css("color","#c62f2f");
+			if($(this).index() == 1){
+			$(".right3-wrap").hide()
+			$(".right4-wrap").show()
+			}else{
+			
+			$(".right4-wrap").hide()
+			$(".right3-wrap").show()	
+			}
+			   
+				
+		}) 
+
+//		页面加载完成后立即发生
+//        	window.onload = function(){  
+//            var oTable = document.getElementById("num");  
+//            for(var i=0;i<oTable.rows.length;i++){  
+//            oTable.rows[i].cells[0].innerHTML = (i+1);  
+//        }  
+//    }  
+		
+		$("tbody tr").click(function(){
+			$("tbody tr").css("background","#ffffff").removeClass("nochange")
+			$(this).css("background","#e3e3e5").addClass("nochange")
+		
+		})
+//		$("tbody tr").hover(function(){
+//			$("tbody tr").css("background","#ffffff")
+//			$(this).css("background","#ebeced")
+//		})
+		
+//		开始播放和暂停
+		 $("#btn-play").click(function(){
+			var audio = document.getElementById("audio");
+			if($("#btn-play").hasClass("bf")){
+				 if(audio.played){                 
+					 audio.pause();
+				}
+			$("#btn-play").css("background-image","url(img3/play.svg)")	 
+						  .removeClass("bf")
+			}else{
+				$("#btn-play").css("background-image","url(img3/stop.svg)").addClass("bf")
+				if(audio.paused){                 
+				 audio.play();
+				}
+	
+			}
+			 
+		 })
+		
+		
+		
+		
+
+		//  暂停
+	
+
+		  var music = new Array();
+		//歌单
+		  music = ["探清水河","奉献","暧昧","浣花溪","吴昊","當山みれい","RAM WIRE","LOVE"];
+		  var people = new Array();
+		  pname = ["张云雷","韩寒","薛之谦","杨画画","吴昊","光","歩み","ただ一つの愿いさえ"];
+		  var num = 0;  
+
+
+		//  上一首
+	  	var b3 = document.getElementById("btn-pre");
+		  b3.onclick = function(){
+			num = (num + 7)%8;
+			audio.src =  "audio/"+music[num]+".mp3";
+			document.getElementById("name").innerHTML = music[num];
+			document.getElementById("people").innerHTML = pname[num];
+			audio.play();
+			$("#btn-play").css("background-image","url(img3/stop.svg)").addClass("bf")  
+		   }
+
+		//  下一首
+		  var b4 = document.getElementById("btn-next");
+		  b4.onclick = function(){
+			num = (num +1)%8;
+			audio.src =  "audio/"+music[num]+".mp3";
+			document.getElementById("name").innerHTML = music[num];
+			document.getElementById("people").innerHTML = pname[num];
+			audio.play();
+			$("#btn-play").css("background-image","url(img3/stop.svg)").addClass("bf") 
+		   }
+
+		//点击播放列表播放歌曲
+	
+		$("tbody tr").dblclick(function(){
+			var num = $(this).index()-1;
+			audio.src =  "audio/"+music[num]+".mp3";
+			audio.play();
+			document.getElementById("name").innerHTML = music[num];
+			document.getElementById("people").innerHTML = pname[num];
+			audio.play();
+			$("#btn-play").css("background-image","url(img3/stop.svg)").addClass("bf") 
+			$("tbody tr span").show();
+			$(this).find("span").hide();
+			$(this).find(".b11").css("background","url(img3/horn.svg) no-repeat");
+		})
+		
+//		搜索
+		$("#btn-play").click(function fun(){
+			var val = $('#sousuo').val();
+			var arr = [
+				
+				{value:'探清水河', num :'0' },
+				{value:'奉献', num :'1' },
+				{value:'暧昧', num : '2' },
+				{value:'浣花溪', num : '3' },
+				{value:'吴昊成名曲', num : '4' },
+				{value:'當山みれい', num : '5' },
+				{value:'RAM WIRE', num : '6' },
+				{value:'LOVE', num : '7' }
+				
+			]
+			
+			var $td = $('#tB');
+			$td.html('');
+			for(var key in arr){
+				var obj = arr[key];
+				if(obj.value.indexOf(val) != -1){
+					var show = obj.num
+					$("#tB tr").hide();
+					$("#tB tr").eq(show).show();
+					
+				}
+			}
+		})
+	   
+
+		
+		
+		
+
+  
+	
+	</script>
+	
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+	    .b12 {
+        width: 35px;
+        height: 25px;
+        font-size: 16px;
+        font-weight: 900;
+    }
+    
+    .c12 {
+        width: 110px;
+        height: 30px;
+        padding: 0 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background: #333;
+        color: #fff;
+        border-radius: 3px;
+    }
+	</style>
+</head>
+
+<body>
+	 <div>
+         <div class=><button class="b12">..</button></div>
+            <div class="c12">
+                   <li>
+                            赞
+                    </li>|
+                        <li>
+                            评论
+                        </li>
+                    </div>
+                </div>
+</body>
+	<script src="js/js/jquery-3.3.1.min.js"></script>
+	<script>
+$(".b12").hover(function(){	
+$(".c12").hide();
+}
+	</script>
+</html>
