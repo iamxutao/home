@@ -26,7 +26,7 @@ a {
     margin-right: 4px;
 }
 
-.topNavBar .logo .card {
+.topNavBar .logo .Card {
     color: #9A9DA2;
 }
 
@@ -65,9 +65,14 @@ a {
 
 /* 开始 */
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background: #000;
-    color: #fff;
+    background: #efefef;
+    color: #000;
     margin: 0px;
     padding: 0px;
 }
@@ -77,12 +82,21 @@ a {
 }
 
 .topNavBar {
-    padding: 20px 16px;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-.topNavBar>a {
+.topNavBar-inner {
+    padding: 0px 16px;
+}
+
+.topNavBar-inner>a {
     padding-top: 3px;
     padding-bottom: 4px;
+    margin-left: 16px;
 }
 
 .clearfix::after {
@@ -92,7 +106,7 @@ a {
 }
 
 .logo>.rs,
-.logo>.card {
+.logo>.Card {
     font-size: 24px;
     color: #e6686a;
     margin-right: 4px;
@@ -100,22 +114,22 @@ a {
     font-family: 'Arial Black';
 }
 
-.logo>.card {
+.logo>.Card {
     color: #9a9da2;
 }
 
-.topNavBar>nav>ul {
+.topNavBar-inner>nav>ul {
     list-style: none;
     padding: 7px 0px 0px 0px;
     margin: 0;
 }
 
-.topNavBar>nav>ul>li {
+.topNavBar-inner>nav>ul>li {
     float: left;
     margin: 0 17px;
 }
 
-.topNavBar>nav>ul>li>a {
+.topNavBar-inner>nav>ul>li>a {
     padding: 5px 0;
     font-size: 12px;
     font-weight: 700;
@@ -125,6 +139,118 @@ a {
     margin-top: 3px;
 }
 
-.topNavBar>nav>ul>li>a:hover {
+.topNavBar-inner>nav>ul>li>a:hover {
     border-bottom-color: #e06567;
+}
+
+.banner {
+    height: 515px;
+    background-image: url(../img/rs-cover.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner>div {
+    height: 515px;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+
+/* 个人信息 */
+
+.card {
+    max-width: 940px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.pictureAndText {
+    padding: 50px;
+}
+
+.picture {
+    float: left;
+}
+
+.picture>img {
+    width: 299px;
+    height: 347px;
+}
+
+.text {
+    float: left;
+    margin-left: 65px;
+    width: 470px;
+}
+
+.welcome {
+    padding: 4px 16px;
+    background: #e6686a;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.Triangle {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-left-color: #e6686a;
+    border-top-width: 0px;
+    position: absolute;
+    left: 4px;
+    top: 100%;
+}
+
+.profile>h1 {
+    margin-top: 18px;
+}
+
+hr {
+    margin: 20px 0px;
+}
+
+dl {
+    display: block;
+}
+
+dl>dt {
+    width: 30%;
+    font-weight: 700;
+    padding: 5px 0px;
+    float: left;
+}
+
+dl>dd {
+    float: left;
+    width: 70%;
+    color: #9da0a7;
+    padding: 5px 0px;
+}
+
+.media {
+    background-color: #E6686A;
+    text-align: center;
+}
+
+.media>a {
+    margin: 16px;
+    display: inline-block;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.media>a:hover {
+    background: #CF5D5F;
+}
+
+.media>a>svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    vertical-align: top;
+    margin-top: 5px;
 }
