@@ -1,68 +1,3 @@
-/* body {
-    background: black;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-  不会因浮动而无高度
-
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.topNavBar .logo {
-    font-family: "Hiragino Kaku Gothic Std";
-    font-size: 22px;
-    padding-top: 1px;
-}
-
-.topNavBar .logo .rs {
-    color: #e6686a;
-    margin-right: 4px;
-}
-
-.topNavBar .logo .Card {
-    color: #9A9DA2;
-}
-
-.topNavBar nav {
-    font-size: 13px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-.topNavBar nav a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.topNavBar nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.topNavBar nav ul>li {
-    float: left;
-    margin-left: 17px;
-    margin-right: 17px;
-}
-
-.topNavBar nav ul>li>a {
-    border-bottom: 3px solid transparent;
-}
-
-.topNavBar nav ul>li>a:hover {
-    border-bottom-color: #DC6465;
-} */
-
-
 /* 开始 */
 
 * {
@@ -70,11 +5,24 @@ a {
     padding: 0;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
 body {
     background: #efefef;
     color: #000;
     margin: 0px;
     padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
 }
 
 a {
@@ -157,6 +105,10 @@ a {
 
 
 /* 个人信息 */
+
+main {
+    margin-top: -335px;
+}
 
 .card {
     max-width: 940px;
@@ -253,4 +205,124 @@ dl>dd {
     fill: #fff;
     vertical-align: top;
     margin-top: 5px;
+}
+
+.buttonWrap {
+    text-align: center;
+}
+
+.button {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 21px 55px;
+    display: inline-block;
+    border: 1px solid #cdcfd1;
+    background: #efefef;
+    border-radius: 2px;
+    color: #3d4451;
+    font-weight: 700;
+    margin: 32px 0;
+    transition: box-shadow 1s;
+}
+
+.button:hover {
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.4);
+}
+
+.self-introduction {
+    font-family: "楷体";
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.skills {
+    max-width: 940px;
+    margin: 60px auto 0px auto;
+}
+
+.section-title {
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.skills>ol {
+    background: #fff;
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.4);
+    padding: 42px 50px 0;
+}
+
+.skills>ol>li {
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.skills>ol>li:nth-child(even) {
+    float: right;
+}
+
+.skills>ol>li>h3 {
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+
+.progressBar {
+    height: 5px;
+    background: #fae1e1;
+    border-radius: 2px;
+    margin: 4px 0 40px 0;
+}
+
+.progressBar>.progress {
+    height: 100%;
+    background: #e6686a;
+    width: 70%;
+}
+
+.skills1 {
+    text-align: center;
+}
+
+.skills>nav {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sample {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid red
+}
+
+.sample>li {
+    float: left;
+    margin-left: 40px;
+}
+
+.sample>li:first-child {
+    margin-left: 0px;
+}
+
+.bar {
+    height: 5px;
+    background: #fff;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    border-radius: 2px;
+}
+
+.bar-inner {
+    height: 100%;
+    background: #e6686a;
+    width: 10%;
+    border-radius: 2px;
 }
