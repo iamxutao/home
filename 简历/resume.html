@@ -184,22 +184,39 @@
         <h2 class="section-title">作品集</h2>
         <nav>
             <ol class="sample clearfix">
-                <li>所有</li>
-                <li>框架</li>
-                <li>原生JS&amp;CSS</li>
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS&amp;CSS</li>
             </ol>
             <div class="bar">
-                <div class="bar-inner"></div>
+                <div class="bar-inner" id="portfoliobar"></div>
             </div>
         </nav>
 
         <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+            <div class="big">
+                <img src="./img/all1.jpg" alt="作品1" style="height:598px;width: 607px;">
+            </div>
+            <div class="small">
+                <img src="./img/all2.jpg" alt="作品2">
+            </div>
+            <div class="small">
+                <img src="./img/all3.jpg" alt="作品3">
+            </div>
         </div>
 
     </section>
 </body>
+<script>
+    portfolio1.onclick = function() {
+        portfoliobar.className = "bar-inner1"
+    }
+    portfolio2.onclick = function() {
+        portfoliobar.className = "bar-inner2"
+    }
+    portfolio3.onclick = function() {
+        portfoliobar.className = "bar-inner3"
+    }
+</script>
 
 </html>

@@ -300,7 +300,7 @@ section.skills {
 .sample {
     display: inline-block;
     vertical-align: top;
-    border: 1px solid red
+    margin-top: 32px;
 }
 
 .sample>li {
@@ -316,13 +316,56 @@ section.skills {
     height: 5px;
     background: #fff;
     margin-top: 5px;
-    margin-bottom: 100px;
+    margin-bottom: 28px;
     border-radius: 2px;
 }
 
-.bar-inner {
+.bar>div {
+    width: 34px;
     height: 100%;
     background: #e6686a;
-    width: 10%;
     border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bar-inner1 {
+    width: 34px;
+    margin-left: 0px;
+}
+
+.bar-inner2 {
+    width: 35px;
+    margin-left: 71px;
+}
+
+.bar-inner3 {
+    width: 96px !important;
+    margin-left: 140px;
+}
+
+.jobs {
+    height: 597px;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.jobs>.big,
+.jobs>.small {
+    position: absolute;
+}
+
+.jobs>.big {
+    top: 0px;
+    left: 0px;
+}
+
+.jobs>div:nth-child(2) {
+    top: 0px;
+    left: 645px;
+}
+
+.jobs>div:last-child {
+    top: 320px;
+    left: 645px;
 }
