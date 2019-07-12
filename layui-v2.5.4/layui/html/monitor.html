@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生产监控</title>
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/monitor.css">
+</head>
+
+<body class="layui-layout-body">
+
+    <!-- style="border-collapse: collapse; border:1px" -->
+    <table class="table2">
+        <tbody>
+            <tr>
+                <th>
+                    <div>
+                        <span>上死点</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+                <th>
+                    <div>
+                        <span>夹紧点</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px ;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+
+            </tr>
+            <tr>
+
+
+                <th>
+                    <div>
+                        <span>回程</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+                <th>
+                    <div>
+                        <span>待机状态</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+
+            </tr>
+            <tr>
+                <th>
+                    <div>
+                        <span>正常-工作位置</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+
+
+                <th>
+                    <div>
+                        <span>速度转换点</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+
+            </tr>
+            <tr>
+                <th>
+                    <div>
+                        <span>慢下</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+                <th>
+                    <div>
+                        <span> 保压</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+
+            </tr>
+            <tr>
+                <th>
+                    <div>
+                        <span>折弯位置点</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+
+                <th>
+                    <div>
+                        <span>不同步信号报警信号</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div>
+                        <span>正常-建压</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+                <th>
+                    <div>
+                        <span>油缸2到位状态</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div><span>快下</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+                <th>
+                    <div>
+                        <span>油缸1到位状态</span>
+                        <span class="layui-badge-dot" style="width: 12px;height: 12px;margin-left: 5px;"></span>
+                    </div>
+
+                </th>
+
+            </tr>
+        </tbody>
+    </table>
+    <table class="table1">
+        <colgroup>
+            <!-- <col width="100">
+           (第一列宽度) -->
+            <!-- <col width="6em"> -->
+            <!-- <col width="6em">
+            <col width="6em">
+            <col width="6em">
+            <col width="6em"> -->
+        </colgroup>
+
+        <tbody>
+            <tr>
+                <th>
+                    <div class="title">
+                        Y1比例阀给定
+                    </div>
+                    <div>
+                        NAN
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+                        Y1比例阀反馈
+                    </div>
+                    <div>
+                        NAN
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+                        Y1下腔压力（Mpa）
+                    </div>
+                    <div>
+                        NAN
+                    </div>
+                </th>
+            </tr>
+            <tr>
+
+
+                <th>
+                    <div class="title">
+                        主压力（Mpa）
+                    </div>
+                    <div>
+                        0
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+                        KBPS设定值
+                    </div>
+                    <div>
+                        N/A
+                    </div>
+
+                </th>
+                <th>
+                    <div class="title">
+                        控制油口压力（X）
+                    </div>
+                    <div>
+                        N/A
+                    </div>
+                </th>
+
+            </tr>
+            <tr>
+                <th>
+                    <div class="title">
+                        Y2比例阀给定
+                    </div class="title">
+                    <div>
+                        NAN
+                    </div>
+                </th>
+
+                <th>
+                    <div class="title">
+                        Y2比例阀反馈
+                    </div>
+                    <div>
+                        NAN
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+
+                        Y2下腔压力（Mpa）
+                    </div>
+                    <div>
+                        NAN
+                    </div>
+                </th>
+            </tr>
+            <tr>
+
+
+
+                <th>
+                    <div class="title">
+                        上死点与下死点间的时间
+                    </div>
+                    <div>
+                        N/A
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+                        上死点与下死点间的时间
+                    </div>
+                    <div>
+                        N/A
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+
+                    </div>
+                    <div>
+
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="title">
+                        温度检测（°C）
+                    </div>
+                    <div>
+                        -15
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+                        滤油器报警
+                    </div>
+                    <div>
+                        N/A
+                    </div>
+                </th>
+                <th>
+                    <div class="title">液位检测（MM）
+                    </div>
+                    <div>
+                        N/A
+                    </div>
+                </th>
+
+            </tr>
+            <tr>
+                <th>
+                    <div class="title">
+                        油液清洁度检测s
+                    </div>
+                    <div>
+                        0
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+                        备用
+                    </div>
+                    <div>
+                        N/A
+                    </div>
+                </th>
+                <th>
+                    <div class="title">
+                        备用
+                    </div>
+                    <div>
+                        N/A
+                    </div>
+                </th>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+<script src="../layui.js"></script>
+<script src="../lay/modules/jquery.js"></script>
+<script src="../src/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function() {
+        var element = layui.element;
+
+    });
+</script>
+
+</html>
