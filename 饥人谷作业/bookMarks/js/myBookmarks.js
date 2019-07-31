@@ -2,9 +2,8 @@
 var hashA = init()
 var keys = hashA['keys']
 var hash = hashA['hash']
-
-// 2. 生成键盘
-// 遍历 keys，生成 kbd 标签
+    // 2. 生成键盘
+    // 遍历 keys，生成 kbd 标签
 generateKeyboard(keys, hash)
 
 // 3. 监听用户动作
