@@ -118,7 +118,7 @@ function generateKeyboard(keys, hash) {
         }
     }
 }
-
+//键盘触发
 function listenToUser(hash) {
     document.onkeypress = function(xzkjcnxlkcjlk) {
         var key = xzkjcnxlkcjlk['key'] // q w e
