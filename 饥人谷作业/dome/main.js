@@ -23,8 +23,6 @@ function Person(name) {
         return _age;
 
     }
-
-
     return {
         name: name,
         getAge: getAge,

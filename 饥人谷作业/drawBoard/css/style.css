@@ -1,4 +1,4 @@
-#canvas {
+#xxx {
     background: green;
     display: block;
 }
@@ -9,8 +9,8 @@ body {
 
 .actions {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
 }
 
 .actions>#brush {
@@ -22,5 +22,5 @@ body {
 }
 
 .actions.x>#eraser {
-    display: none;
+    display: none
 }
