@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>移动端页面滑动，菜单到顶部之后定位在顶部</title>
     <style>
-        * {
+        /* * {
             margin: 0;
             padding: 0;
         }
@@ -33,37 +33,65 @@
         .scale {
             transform: scale(0.5);
             transform-origin: 0% 0%;
+        } */
+        
+        div {
+            width: 500px;
+            height: 500px;
+            background: #e3e3e3;
         }
     </style>
     <script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.js"></script>
 </head>
 
 <body>
-    <div class="header"></div>
+    <!-- <div class="header"></div>
     <div class="container">
-        <div class="liveDiv"></div>
-    </div>
+        <div class="liveDiv"></div> 
+    </div> -->
+
+    <div onclick="turnPage('float.html')" id="content"> </div>
     <script>
         /*
          * 菜单移动到顶部后定位在顶部
          * message[菜单的id名或者class类名]
          * height[菜单距离顶部的距离]
          */
-        function navChangeArea(message, height) {
-            var liveDiv = $("#" + message).length ? $("#" + message) : $("." + message);
-            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            if (scrollTop < height) {
-                liveDiv.css("position", "relative");
-            } else {
-                liveDiv.css("position", "fixed");
-            }
+        // function navChangeArea(message, height) {
+        //     var liveDiv = $("#" + message).length ? $("#" + message) : $("." + message);
+        //     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        //     if (scrollTop < height) {
+        //         liveDiv.css("position", "relative");
+        //     } else {
+        //         liveDiv.css("position", "fixed");
+        //     }
+        // }
+        // $(window).bind("scroll", function() {
+        //     navChangeArea("liveDiv", 100);
+        // });
+        // $(window).bind("touchmove", function() {
+        //     navChangeArea("liveDiv", 100);
+        // });
+    </script>
+    <script>
+        function turnPage(url) {
+
+            var xmlhttp = new XMLHttpRequest();
+
+            $.ajax({
+
+                type: "get",
+
+                url: url,
+
+                success: function(html) {
+
+                    $("#content").html(html);
+
+                }
+            })
+
         }
-        $(window).bind("scroll", function() {
-            navChangeArea("liveDiv", 100);
-        });
-        $(window).bind("touchmove", function() {
-            navChangeArea("liveDiv", 100);
-        });
     </script>
 </body>
 

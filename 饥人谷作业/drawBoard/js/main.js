@@ -5,7 +5,6 @@ autoSetCanvasSize(yyy)
 
 listenToMouse(yyy)
 
-
 var eraserEnabled = false
 eraser.onclick = function() {
     eraserEnabled = true
@@ -33,6 +32,16 @@ function autoSetCanvasSize(canvas) {
 
         canvas.width = pageWidth
         canvas.height = pageHeight
+
+        // 在canvas绘制前填充白色背景
+
+        clear.onclick = function() {
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            context.fillStyle = "#fff";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+
     }
 }
 
@@ -95,4 +104,16 @@ function listenToMouse(canvas) {
     canvas.onmouseup = function(aaa) {
         using = false
     }
+}
+
+//下载
+download.onclick = function() {
+    var url = yyy.toDataURL("image/png");
+    console.log(url)
+    var a = document.createElement("a")
+    document.body.appendChild(a)
+    a.href = url
+    a.download = "xxx"
+    a.click()
+
 }
